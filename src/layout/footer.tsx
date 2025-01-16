@@ -28,7 +28,10 @@ const Footer = () => {
     <footer className="bg-gradient-to-t border-gray-900/5 border-t dark:border-gray-100/5 dark:from-gray-950/90 dark:to-gray-900/40 dark:via-gray-950/40 from-slate-500/25 relative to-75% to-slate-500/0 via-25% via-slate-500/5 z-40">
       <div className="w-full flex flex-col justify-center mx-auto align-center max-w-[1000px]">
         <div className="gap-12 grid lg:grid-cols-4 place-content-center place-items-center pt-6">
-          <Link href="/" className="gap-2 lg:col-span-2 pb-4 w-full">
+          <Link
+            href="/"
+            className="gap-2 lg:col-span-2 pb-4 w-full justify-items-center"
+          >
             <Image
               src="/akasia-logo.svg"
               alt="Logo"
@@ -52,22 +55,22 @@ const Footer = () => {
             <ul className="flex  flex-col justify-center items-center sm:justify-start sm:items-start">
               <li id="f-home">
                 <Link href="/">
-                  <span className="font-medium">Home</span>
+                  <span className="font-medium text-sm">Home</span>
                 </Link>
               </li>
               <li id="f-about">
                 <Link href="/about">
-                  <span className="font-medium">About akasia</span>
+                  <span className="font-medium text-sm">About akasia</span>
                 </Link>
               </li>
               <li id="f-howtoinvest">
                 <Link href="/investment">
-                  <span className="font-medium">How to Invest</span>
+                  <span className="font-medium text-sm">How to Invest</span>
                 </Link>
               </li>
               <li id="f-contactus">
                 <Link href="/contactus">
-                  <span className="font-medium">Contact</span>
+                  <span className="font-medium text-sm">Contact</span>
                 </Link>
               </li>
             </ul>
@@ -80,7 +83,7 @@ const Footer = () => {
             <ul className="flex flex-col justify-center items-center sm:justify-start sm:items-start">
               <li id="footer-privacypolicy">
                 <Link href="/privacy/">
-                  <span className="font-medium">Privacy Policy</span>
+                  <span className="font-medium text-sm">Privacy Policy</span>
                 </Link>
               </li>
             </ul>
@@ -95,7 +98,7 @@ const Footer = () => {
               id="copywrite"
               className="flex flex-row w-full justify-center sm:justify-center items-center gap-1 text-xs"
             >
-              <span className="text-xs font-medium text-gray-900 dark:text-white">
+              <span className="text-xs font-medium text-sm text-gray-900 dark:text-white">
                 &copy; {new Date().getFullYear()} All rights reserved
               </span>
             </div>
