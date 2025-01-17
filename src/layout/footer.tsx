@@ -4,9 +4,65 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import logo from "../assets/images/akasia-logo.svg";
+import logoLight from "../assets/images/akasia-logo-light.svg";
+
+import MailIcon from "../assets/images/icons/mail.svg";
+import xIcon from "../assets/images/icons/x.svg";
+import instagramIcon from "../assets/images/icons/instagram.svg";
+import sunIcon from "../assets/images/icons/sun.svg";
+import moonIcon from "../assets/images/icons/moon.svg";
+
 import { useEffect } from "react";
 
 const Footer = () => {
+  const linksIcons = [
+    {
+      label: "our instagram",
+      link: "https://www.instagram.com/get_akasia",
+      icon: instagramIcon,
+      class: "gd-social-icons p-3 bg-gray-950 rounded-md",
+    },
+    {
+      label: "our X",
+      link: "/",
+      icon: xIcon,
+      class: "gd-social-icons p-3 bg-gray-950 rounded-md",
+    },
+    {
+      label: "Contact us via Email",
+      link: "/",
+      icon: MailIcon,
+      class: "gd-social-icons p-3 bg-gray-950 rounded-md",
+    },
+  ];
+
+  const quickLinks = [
+    {
+      title: "Home",
+      to: "/",
+    },
+    {
+      title: "About akasia",
+      to: "/about",
+    },
+    {
+      title: "How to Invest",
+      to: "/investment",
+    },
+    {
+      title: "Contact",
+      to: "/contactus",
+    },
+  ];
+
+  const legalLinks = [
+    {
+      title: "Privacy Policy",
+      to: "/privacy",
+    },
+  ];
+
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
@@ -33,14 +89,14 @@ const Footer = () => {
             className="gap-2 lg:col-span-2 pb-4 w-full justify-items-center"
           >
             <Image
-              src="/akasia-logo.svg"
+              src={logo}
               alt="Logo"
               width={70}
               height={70}
               className="flex dark:hidden"
             />
             <Image
-              src="/akasia-logo-light.svg"
+              src={logoLight}
               alt="Logo"
               width={70}
               height={70}
@@ -53,26 +109,13 @@ const Footer = () => {
           >
             <h3 className="text-md">Quick Links</h3>
             <ul className="flex  flex-col justify-center items-center sm:justify-start sm:items-start">
-              <li id="f-home">
-                <Link href="/">
-                  <span className="font-medium text-sm">Home</span>
-                </Link>
-              </li>
-              <li id="f-about">
-                <Link href="/about">
-                  <span className="font-medium text-sm">About akasia</span>
-                </Link>
-              </li>
-              <li id="f-howtoinvest">
-                <Link href="/investment">
-                  <span className="font-medium text-sm">How to Invest</span>
-                </Link>
-              </li>
-              <li id="f-contactus">
-                <Link href="/contactus">
-                  <span className="font-medium text-sm">Contact</span>
-                </Link>
-              </li>
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link href={link.to}>
+                    <span className="font-medium text-sm">{link.title}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div
@@ -81,11 +124,13 @@ const Footer = () => {
           >
             <h3 className="text-md">Legal</h3>
             <ul className="flex flex-col justify-center items-center sm:justify-start sm:items-start">
-              <li id="footer-privacypolicy">
-                <Link href="/privacy/">
-                  <span className="font-medium text-sm">Privacy Policy</span>
-                </Link>
-              </li>
+              {legalLinks.map((link, index) => (
+                <li key={index}>
+                  <Link href={link.to}>
+                    <span className="font-medium text-sm">{link.title}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -96,9 +141,9 @@ const Footer = () => {
           <div className="w-full mb-3 mt-6 flex flex-col sm:flex-row gap-4 items-center justify-center ">
             <div
               id="copywrite"
-              className="flex flex-row w-full justify-center sm:justify-center items-center gap-1 text-xs"
+              className="flex flex-row w-full justify-center sm:justify-center items-center gap-1 text-sm"
             >
-              <span className="text-xs font-medium text-sm text-gray-900 dark:text-white">
+              <span className="font-medium text-sm text-gray-900 dark:text-white">
                 &copy; {new Date().getFullYear()} All rights reserved
               </span>
             </div>
@@ -106,60 +151,32 @@ const Footer = () => {
               id="footer-social"
               className="flex flex-row w-full items-center justify-center sm:justify-end gap-6 uppercase"
             >
-              <Link
-                id="footer-social-email"
-                aria-label="Contact us via Email"
-                className="gd-social-icons p-3 bg-gray-950 rounded-md"
-                href="mailto:info@getakasia.com"
-              >
-                <Image
-                  src="/icons/mail.svg"
-                  alt="icon"
-                  width={12}
-                  height={12}
-                />
-              </Link>
-              <Link
-                id="footer-social-x"
-                aria-label="RLF on X / Twitter"
-                className="gd-social-icons bg-gray-950 rounded-md"
-                target="_blank"
-                href="/"
-              >
-                <div>
-                  <Image src="/icons/x.svg" alt="icon" width={12} height={12} />
-                </div>
-              </Link>
-              <Link
-                id="footer-social-insta"
-                aria-label="RLF on Instagram"
-                className="gd-social-icons bg-gray-950 rounded-md"
-                target="_blank"
-                href="https://www.instagram.com/get_akasia"
-              >
-                <div>
-                  <Image
-                    src="/icons/instagram.svg"
-                    alt="icon"
-                    width={12}
-                    height={12}
-                  />
-                </div>
-              </Link>
+              {linksIcons.map((link, index) => (
+                <Link
+                  aria-label={link.label}
+                  className="bg-gray-950 rounded-md p-1"
+                  href={link.link}
+                  key={index}
+                  target="_blank"
+                >
+                  <Image src={link.icon} alt="icon" width={14} height={14} />
+                </Link>
+              ))}
+
               <button
                 aria-label="Toggle dark mode"
                 onClick={toggleTheme}
                 className=""
               >
                 <Image
-                  src="/icons/moon.svg"
+                  src={moonIcon}
                   alt="icon"
                   width={25}
                   height={25}
                   className="flex dark:hidden"
                 />
                 <Image
-                  src="/icons/sun.svg"
+                  src={sunIcon}
                   alt="icon"
                   width={25}
                   height={25}
