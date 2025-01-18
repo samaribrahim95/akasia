@@ -19,7 +19,9 @@ export default async function RootLayout({
           <NextIntlClientProvider messages={messages}>
             <div>
               <Navbar />
-              {children}
+              <div className="container px-4 mx-auto">
+                {children}
+              </div>
               <Footer />
             </div>
           </NextIntlClientProvider>
