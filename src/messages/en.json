@@ -1,0 +1,15 @@
+{
+  "NavBar" : {
+    "about" : "About akasia",
+    "howInvest" : "How to Invest",
+    "contact": "Contact"
+  },
+  "Home": {
+    "title" : "akasia, Your Pathway to Financial Prosperity",
+    "description": "A financial technology company licensed by the Saudi Central Bank to provide services aimed at facilitating money management and financial planning.",
+    "learnMore": "Learn More",
+    "compliantIslamic": "Compliant with Islamic Sharia",
+    "transparency": "Transparency, Security, and Innovation",
+    "licensedByFinancial" : "Licensed by the Financial Market Authority"
+  }
+}

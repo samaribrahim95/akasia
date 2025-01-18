@@ -1,29 +1,49 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 import logoTxt from "../assets/images/akasia-txt-logo.svg";
 import logoTxtLight from "../assets/images/akasia-txt-logo-light.svg";
+import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const t = useTranslations('NavBar');
+  const router = useRouter();
+  const [locale, setLocale] = useState<string>();
   const menuItem = [
     {
-      title: "About akasia",
+      title: t('about'),
       to: "/about",
     },
     {
-      title: "How to Invest",
+      title: t('howInvest'),
       to: "/investment",
     },
     {
-      title: "Contact",
+      title: t('contact'),
       to: "/contactus",
     },
-    {
-      title: "العربية",
-      to: "/",
-    },
   ];
+
+  useEffect(() => {
+    const cookiesLocale = document.cookie.split("; ").find((row) => row.startsWith("AKASIAAPP_LOCALE="))?.split("=")[1]!;
+    if(cookiesLocale) {
+      setLocale(cookiesLocale)
+    }else {
+      const browserLocale = navigator.language.slice(0,2)
+      setLocale(browserLocale)
+      document.cookie = `AKASIAAPP_LOCALE=${browserLocale}`
+      router.refresh()
+    }
+  },[router])
+
+  const changeLocale = (newLocale: string) => {
+    setLocale(newLocale)
+    document.cookie = `AKASIAAPP_LOCALE=${newLocale}`
+    router.refresh()
+  }
   return (
     <nav className="fixed w-full z-50 top-0 start-0 border-b h-[52px] border-gray-200 dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -75,7 +95,7 @@ const Navbar = () => {
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             {menuItem.map((items, index) => (
-              <li>
+              <li key={index}>
                 <Link
                   href={items.to}
                   className="font-medium text-black dark:text-slate-100"
@@ -85,6 +105,12 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+
+            <li>
+              <button onClick={() => changeLocale(locale == 'ar' ? 'en' : 'ar')} className="font-medium text-black dark:text-slate-100">
+                {locale == 'ar' ? 'english' : 'العربية'}
+              </button>
+            </li>
           </ul>
         </div>
       </div>
