@@ -1,5 +1,6 @@
 {
   "NavBar" : {
+    "home" : "Home",
     "about" : "About akasia",
     "howInvest" : "How to Invest",
     "contact": "Contact"

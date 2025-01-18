@@ -5,3 +5,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    h1 {
+      @apply text-3xl font-semibold mb-5;
+    }
+    h2 {
+      @apply text-2xl font-semibold mb-5;
+    }
+    h3 {
+      @apply text-lg font-semibold;
+    }
+  }
+
+

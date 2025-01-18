@@ -9,41 +9,48 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 
 const Navbar = () => {
-  const t = useTranslations('NavBar');
+  const t = useTranslations("NavBar");
   const router = useRouter();
   const [locale, setLocale] = useState<string>();
   const menuItem = [
     {
-      title: t('about'),
+      title: t("home"),
+      to: "/",
+    },
+    {
+      title: t("about"),
       to: "/about",
     },
     {
-      title: t('howInvest'),
+      title: t("howInvest"),
       to: "/investment",
     },
     {
-      title: t('contact'),
-      to: "/contactus",
+      title: t("contact"),
+      to: "/contact",
     },
   ];
 
   useEffect(() => {
-    const cookiesLocale = document.cookie.split("; ").find((row) => row.startsWith("AKASIAAPP_LOCALE="))?.split("=")[1]!;
-    if(cookiesLocale) {
-      setLocale(cookiesLocale)
-    }else {
-      const browserLocale = navigator.language.slice(0,2)
-      setLocale(browserLocale)
-      document.cookie = `AKASIAAPP_LOCALE=${browserLocale}`
-      router.refresh()
+    const cookiesLocale = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("AKASIAAPP_LOCALE="))
+      ?.split("=")[1]!;
+    if (cookiesLocale) {
+      setLocale(cookiesLocale);
+    } else {
+      const browserLocale = navigator.language.slice(0, 2);
+      setLocale(browserLocale);
+      document.cookie = `AKASIAAPP_LOCALE=${browserLocale}`;
+      router.refresh();
     }
-  },[router])
+  }, [router]);
 
   const changeLocale = (newLocale: string) => {
-    setLocale(newLocale)
-    document.cookie = `AKASIAAPP_LOCALE=${newLocale}`
-    router.refresh()
-  }
+    setLocale(newLocale);
+    document.cookie = `AKASIAAPP_LOCALE=${newLocale}`;
+    router.refresh();
+  };
   return (
     <nav className="fixed w-full z-50 top-0 start-0 border-b h-[52px] border-gray-200 dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -107,8 +114,11 @@ const Navbar = () => {
             ))}
 
             <li>
-              <button onClick={() => changeLocale(locale == 'ar' ? 'en' : 'ar')} className="font-medium text-black dark:text-slate-100">
-                {locale == 'ar' ? 'english' : 'العربية'}
+              <button
+                onClick={() => changeLocale(locale == "ar" ? "en" : "ar")}
+                className="font-medium text-black dark:text-slate-100"
+              >
+                {locale == "ar" ? "english" : "العربية"}
               </button>
             </li>
           </ul>
