@@ -114,10 +114,10 @@ const About = () => {
       <h1 className=""> {t("title")}</h1>
       <Image
         src={aboutImg}
-        className="w-full object-cover rounded-xl mt-10"
+        className="w-full object-cover rounded-xl mt-5"
         alt="About Akasia"
       />
-      <section className="mt-16 grid lg:grid-cols-2 gap-8 lg:gap-12">
+      <section className="py-16 grid lg:grid-cols-2 gap-8 lg:gap-12">
         <div className="lg:col-span-2">
           <div>
             <h2 className="uppercase font-bold text-2xl md:text-3xl">
@@ -142,9 +142,9 @@ const About = () => {
       </section>
 
       <section className="gap-8 lg:py-16">
-        <div className="flex flex-col lg:h-[32rem] lg:flex-row lg:items-center">
+        <div className="flex flex-col lg:flex-row lg:items-center">
           <div className="w-full lg:w-1/2 flex-1">
-            <div className="lg:max-w-lg">
+            <div className="lg:max-w-lg mb-16 lg:mb-0">
               <h2 className="text-3xl lg:text-4xl">
                 {t("innovativeInvestmentPaths")}
               </h2>
@@ -164,7 +164,7 @@ const About = () => {
             />
           </div>
         </div>
-        <div className="">
+        <div className="mt-10">
           <div className="grid sm:grid-cols-3 gap-8">
             {featuresAkasia.map((item, index) => (
               <div className="gap-x-3 flex items-start" key={index}>
@@ -196,7 +196,7 @@ const About = () => {
           <div className="absolute top-0 right-0  w-[480px] h-[480px] pointer-events-none bg-gradient-to-b from-slate-500/25 via-slate-500/5 via-25% to-slate-500/0 to-75% rounded-full"></div>
           <div className="grid md:grid-cols-2 gap-12 ">
             <div>
-              <h2 className="uppercase text-3xl text-gray-900 font-bold lg:text-4xl dark:text-white !leading-[47px]">
+              <h2 className="uppercase text-3xl text-gray-900 font-bold lg:text-4xl dark:text-white !leading-[60px]">
                 {t("provideSolutions")}
               </h2>
             </div>

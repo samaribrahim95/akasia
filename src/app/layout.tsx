@@ -18,7 +18,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <div>
             <Navbar />
-            <div className="container md:max-w-[1000px] md:mx-auto pt-[80px] mb-[50px]">
+            <div className="container md:max-w-[1000px] mx-auto pt-[80px] mb-[50px] px-5">
               {children}
             </div>
             <Footer />

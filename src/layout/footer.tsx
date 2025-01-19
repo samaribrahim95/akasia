@@ -83,10 +83,10 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-t border-gray-900/5 border-t dark:border-gray-100/5 dark:from-gray-950/90 dark:to-gray-900/40 dark:via-gray-950/40 from-slate-500/25 relative to-75% to-slate-500/0 via-25% via-slate-500/5 z-40">
       <div className="w-full flex flex-col justify-center mx-auto align-center max-w-[1000px]">
-        <div className="gap-12 grid lg:grid-cols-4 place-content-center place-items-center pt-6">
+        <div className="gap-12 grid md:grid-cols-4 place-content-center place-items-center pt-6">
           <Link
             href="/"
-            className="gap-2 lg:col-span-2 pb-4 w-full justify-items-center"
+            className="gap-2 md:col-span-2 pb-4 w-full justify-items-center"
           >
             <Image
               src={logo}

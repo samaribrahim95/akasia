@@ -54,6 +54,10 @@
     "investmentPortfolioDes": "After registering, you may also be asked to answer some questions to determine your investment goals to identify the right investment portfolio for you. You can choose the type of portfolio that matches your goals."
   },
   "Contact": {
-    "title": "Contact Us"
+    "title": "Contact Us",
+    "hearFromYou": "We love to hear from you",
+    "haveConversation": "We are always here to have a conversation.",
+    "contactViaEmail": "Contact via Email",
+    "respondQuickly": "Our team will respond as quickly as possible."
   }
 }

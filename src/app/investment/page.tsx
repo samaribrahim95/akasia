@@ -37,11 +37,11 @@ const Investment = () => {
       <h1 className=""> {t("title")}</h1>
       <Image
         src={investmentImage}
-        className="w-full object-cover rounded-xl mt-10"
+        className="w-full object-cover rounded-xl mt-5"
         alt="Investment"
       />
       <section className="mt-16">
-        <div className="relative z-50 lg:grid lg:grid-cols-10 lg:gap-12 lg:items-center">
+        <div className="relative z-50 lg:grid lg:gap-12 lg:items-center">
           <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-6 lg:order-2">
             <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-6 lg:order-2">
               <div className="bg-gray-100 w-full h-5/6 rounded-xl sm:h-3/4 lg:h-full dark:bg-white/[.075] py-[30px] ps-[50px] pe-4">
@@ -50,7 +50,10 @@ const Investment = () => {
                 </h2>
                 <nav className="grid gap-4 mt-5 md:mt-10">
                   {investmentSetps.map((item, index) => (
-                    <div className="hs-tab-active:hover:border-transparent text-start hover:bg-gray-200 p-4 md:p-5 rounded-xl dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                    <div
+                      key={index}
+                      className="hs-tab-active:hover:border-transparent text-start hover:bg-gray-200 p-4 md:p-5 rounded-xl dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                    >
                       <div className="flex">
                         <item.icon />
                         <span className="grow ms-6">
