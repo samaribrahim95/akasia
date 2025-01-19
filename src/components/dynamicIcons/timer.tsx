@@ -10,7 +10,6 @@ const TimerIcon = () => {
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
-      strokeLinecap="round"
     >
       <path d="m12 14 4-4"></path>
       <path d="M3.34 19a10 10 0 1 1 17.32 0"></path>

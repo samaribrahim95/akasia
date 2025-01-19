@@ -10,7 +10,6 @@ const RobotIcon = () => {
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
-      strokeLinecap="round"
     >
       <rect width="18" height="10" x="3" y="11" rx="2"></rect>
       <circle cx="12" cy="5" r="2"></circle>

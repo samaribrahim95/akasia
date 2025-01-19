@@ -14,10 +14,6 @@ const Navbar = () => {
   const [locale, setLocale] = useState<string>();
   const menuItem = [
     {
-      title: t("home"),
-      to: "/",
-    },
-    {
       title: t("about"),
       to: "/about",
     },
@@ -56,23 +52,27 @@ const Navbar = () => {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div id="nav-logo">
           <div className="hidden dark:flex">
-            <Image
-              alt="logo - akasia"
-              loading="lazy"
-              width="70"
-              height="50"
-              className="object-cover object-center"
-              src={logoTxtLight}
-            />
+            <Link href='/'>
+              <Image
+                alt="logo - akasia"
+                loading="lazy"
+                width="70"
+                height="50"
+                className="object-cover object-center"
+                src={logoTxtLight}
+              />
+            </Link>
           </div>
           <div className="flex dark:hidden">
-            <Image
-              alt="logo - akasia"
-              width="70"
-              height="50"
-              className=""
-              src={logoTxt}
-            />
+            <Link href='/'>
+              <Image
+                alt="logo - akasia"
+                width="70"
+                height="50"
+                className=""
+                src={logoTxt}
+              />
+            </Link>
           </div>
         </div>
         <button
@@ -100,7 +100,7 @@ const Navbar = () => {
           </svg>
         </button>
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
             {menuItem.map((items, index) => (
               <li key={index}>
                 <Link
