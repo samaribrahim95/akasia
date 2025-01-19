@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 const Navbar = () => {
   const t = useTranslations("NavBar");
   const router = useRouter();
-  const [locale, setLocale] = useState<string>();
+  const [locale, setLocale] = useState<string>('');
   const menuItem = [
     {
       title: t("about"),

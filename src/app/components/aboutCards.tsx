@@ -1,4 +1,3 @@
-import { useTranslations } from "next-intl";
 import { JSX } from "react";
 
 const AboutCards = (p: {
