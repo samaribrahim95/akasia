@@ -28,17 +28,22 @@ const Navbar = () => {
   ];
 
   useEffect(() => {
-    const cookiesLocale = document.cookie
+    const getCookieLocale = document.cookie
       .split("; ")
       .find((row) => row.startsWith("AKASIAAPP_LOCALE="))
-      ?.split("=")[1]!;
-    if (cookiesLocale) {
-      setLocale(cookiesLocale);
-    } else {
-      const browserLocale = navigator.language.slice(0, 2);
-      setLocale(browserLocale);
-      document.cookie = `AKASIAAPP_LOCALE=${browserLocale}`;
-      router.refresh();
+    if(getCookieLocale) {
+      let cookiesLocaleList = getCookieLocale.split("=");
+      if(cookiesLocaleList.length > 0) {
+        let cookiesLocale = cookiesLocaleList[1];
+        if (cookiesLocale) {
+          setLocale(cookiesLocale);
+        } else {
+          const browserLocale = navigator.language.slice(0, 2);
+          setLocale(browserLocale);
+          document.cookie = `AKASIAAPP_LOCALE=${browserLocale}`;
+          router.refresh();
+        }
+      }
     }
   }, [router]);
 
