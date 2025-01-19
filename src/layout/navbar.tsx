@@ -32,9 +32,9 @@ const Navbar = () => {
       .split("; ")
       .find((row) => row.startsWith("AKASIAAPP_LOCALE="))
     if(getCookieLocale) {
-      let cookiesLocaleList = getCookieLocale.split("=");
+      const cookiesLocaleList = getCookieLocale.split("=");
       if(cookiesLocaleList.length > 0) {
-        let cookiesLocale = cookiesLocaleList[1];
+        const cookiesLocale = cookiesLocaleList[1];
         if (cookiesLocale) {
           setLocale(cookiesLocale);
         } else {
