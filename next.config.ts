@@ -4,8 +4,6 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: '/dist'
 };
 
 export default withNextIntl(nextConfig);

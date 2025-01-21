@@ -1,9 +1,14 @@
 import {getRequestConfig} from 'next-intl/server';
-import { cookies } from 'next/headers';
-
-export default getRequestConfig(async () => {
+import {routing} from './routing';
+ 
+export default getRequestConfig(async ({requestLocale}) => {
   // This typically corresponds to the `[locale]` segment
-  const locale = (await cookies()).get("AKASIAAPP_LOCALE")?.value ?? 'en'
+  let locale = await requestLocale;
+ 
+  // Ensure that a valid locale is used
+  if (!locale || !routing.locales.includes(locale as any)) {
+    locale = routing.defaultLocale;
+  }
  
   return {
     locale,

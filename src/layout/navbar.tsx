@@ -1,57 +1,38 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import logoTxt from "../assets/images/akasia-txt-logo.svg";
 import logoTxtLight from "../assets/images/akasia-txt-logo-light.svg";
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
-const Navbar = () => {
+const Navbar = ({ locale } : {locale: string}) => {
   const t = useTranslations("NavBar");
+  const pathname = usePathname();
   const router = useRouter();
-  const [locale, setLocale] = useState<string>('');
+
   const menuItem = [
     {
       title: t("about"),
-      to: "/about",
+      to: `/${locale}/about`,
     },
     {
       title: t("howInvest"),
-      to: "/investment",
+      to: `/${locale}/investment`,
     },
     {
       title: t("contact"),
-      to: "/contact",
+      to: `/${locale}/contact`,
     },
   ];
 
-  useEffect(() => {
-    const getCookieLocale = document.cookie
-      .split("; ")
-      .find((row) => row.startsWith("AKASIAAPP_LOCALE="))
-    if(getCookieLocale) {
-      const cookiesLocaleList = getCookieLocale.split("=");
-      if(cookiesLocaleList.length > 0) {
-        const cookiesLocale = cookiesLocaleList[1];
-        if (cookiesLocale) {
-          setLocale(cookiesLocale);
-        } else {
-          const browserLocale = navigator.language.slice(0, 2);
-          setLocale(browserLocale);
-          document.cookie = `AKASIAAPP_LOCALE=${browserLocale}`;
-          router.refresh();
-        }
-      }
-    }
-  }, [router]);
+  const toggleLang = (newLocale: string) => {
+    const path = pathname.split("/").slice(2).join('/');
+    router.push(`/${newLocale}/${path}`)
+  }
 
-  const changeLocale = (newLocale: string) => {
-    setLocale(newLocale);
-    document.cookie = `AKASIAAPP_LOCALE=${newLocale}`;
-    router.refresh();
-  };
   return (
     <nav className="fixed w-full z-50 top-0 start-0 border-b h-[52px] border-gray-200 dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -120,7 +101,7 @@ const Navbar = () => {
 
             <li>
               <button
-                onClick={() => changeLocale(locale == "ar" ? "en" : "ar")}
+                onClick={() => toggleLang(locale == "ar" ? "en" : "ar")}
                 className="font-medium text-black dark:text-slate-100"
               >
                 {locale == "ar" ? "english" : "العربية"}

@@ -16,9 +16,7 @@ import BookIcon from "@/components/dynamicIcons/book";
 import UsersIcon from "@/components/dynamicIcons/users";
 import CheckIcon from "@/components/dynamicIcons/check";
 
-import AboutCards from "../../components/aboutCards";
-
-// const [locale, setLocale] = useState<string>();
+import AboutCards from "../../../components/aboutCards";
 
 const About = () => {
   const t = useTranslations("About");
