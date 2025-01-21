@@ -2,13 +2,17 @@
   "name": "akasia",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://samaribrahim95.github.io/akasia/",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "next": "15.1.4",
     "next-intl": "^3.26.3",
     "react": "^19.0.0",
