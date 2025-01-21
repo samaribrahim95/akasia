@@ -1,11 +1,14 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import Footer from "@/layout/footer";
 import Navbar from "@/layout/navbar";
 import '../../assets/css/index.css'
 import { LocalesType, routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({locale}));
+}
 
 export default async function RootLayout({
   children,
@@ -19,8 +22,6 @@ export default async function RootLayout({
     notFound();
   }
   
-  setRequestLocale(locale);
-
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
