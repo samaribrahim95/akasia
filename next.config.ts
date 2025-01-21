@@ -4,7 +4,8 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
-  basePath: 'ttps://github.com/samaribrahim95/akasia'
+  output: 'export',
+  basePath: '/dist'
 };
 
 export default withNextIntl(nextConfig);
