@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import Footer from "@/layout/footer";
 import Navbar from "@/layout/navbar";
 import '../../assets/css/index.css'
@@ -19,6 +19,8 @@ export default async function RootLayout({
     notFound();
   }
   
+  setRequestLocale(locale);
+
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
