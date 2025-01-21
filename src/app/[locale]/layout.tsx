@@ -1,10 +1,11 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import Footer from "@/layout/footer";
 import Navbar from "@/layout/navbar";
 import '../../assets/css/index.css'
-import { routing } from "@/i18n/routing";
+import { LocalesType, routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+
 
 export default async function RootLayout({
   children,
@@ -14,7 +15,7 @@ export default async function RootLayout({
   params: {locale: string};
 }>) {
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as LocalesType)) {
     notFound();
   }
   

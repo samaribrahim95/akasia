@@ -5,6 +5,7 @@ import InstagramIcon from "@/components/dynamicIcons/instagram";
 import XIcon from "@/components/dynamicIcons/x";
 import { useTranslations } from "next-intl";
 import BluredBg from "@/components/blueredBg";
+import Link from "next/link";
 
 const Header = () => {
   const t = useTranslations("Home");
@@ -30,27 +31,27 @@ const Header = () => {
             </div>
             <div className="mt-8 mb-8">
               <div className="flex gap-6 mb-4 items-center justify-center">
-                <a
+                <Link
                   href="https://www.instagram.com/get_akasia"
                   className="px-4 py-2.5 "
                 >
                   <InstagramIcon />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://twitter.com/get_akasia"
                   className="px-4 py-2.5"
                 >
                   <XIcon />
-                </a>
+                </Link>
               </div>
               <div className="text-center">
-                <a
+                <Link
                   href="/about"
                   className="text-sm font-noto font-semibold leading-6 hover:mr-2"
                 >
                   {t("learnMore")}
                   <span className="inline-block ltr:rotate-180 mx-2">←</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
