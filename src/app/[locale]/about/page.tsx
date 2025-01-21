@@ -4,8 +4,8 @@
 import { useTranslations } from "next-intl";
 
 import Image from "next/image";
-import aboutImg from "../../assets/images/about.jpg";
-import aboutImg2 from "../../assets/images/about-2.jpg";
+import aboutImg from "../../../assets/images/about.jpg"
+import aboutImg2 from "../../../assets/images/about-2.jpg";
 
 import MissionIcon from "@/components/dynamicIcons/mission";
 import VisionIcon from "@/components/dynamicIcons/vision";

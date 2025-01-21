@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import contactImage from "../../assets/images/contact.jpg";
+import contactImage from "../../../assets/images/contact.jpg";
 import MailIcon from "@/components/dynamicIcons/mail";
 
 const Contact = () => {

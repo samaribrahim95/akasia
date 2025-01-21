@@ -4,8 +4,8 @@
 import { useTranslations } from "next-intl";
 
 import Image from "next/image";
-import investmentImage from "../../assets/images/invesment.jpg";
-import invesmentImage2 from "../../assets/images/invesment-2.jpg";
+import investmentImage from "../../../assets/images/invesment.jpg";
+import invesmentImage2 from "../../../assets/images/invesment-2.jpg";
 
 import DownloadIcon from "@/components/dynamicIcons/download";
 import TimerIcon from "@/components/dynamicIcons/timer";
