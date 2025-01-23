@@ -6,3 +6,5 @@ const Brief = () => {
     </div>
   )
 }
+
+export default Brief
