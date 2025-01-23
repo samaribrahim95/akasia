@@ -63,7 +63,7 @@ const Footer = ({ locale }: { locale: string }) => {
   const legalLinks = [
     {
       title: t("privacy"),
-      to: "/privacy",
+      to: `/${locale}/privacy`,
     },
   ];
 
