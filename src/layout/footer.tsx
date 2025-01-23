@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import logo from "../assets/images/akasia-logo.svg";
 import logoLight from "../assets/images/akasia-logo-light.svg";
@@ -16,6 +17,9 @@ import moonIcon from "../assets/images/icons/moon.svg";
 import { useEffect } from "react";
 
 const Footer = ({ locale }: { locale: string }) => {
+  const t = useTranslations("Footer");
+  const currentYear = new Date().getFullYear();
+
   const linksIcons = [
     {
       label: "our instagram",
@@ -39,26 +43,26 @@ const Footer = ({ locale }: { locale: string }) => {
 
   const quickLinks = [
     {
-      title: "Home",
+      title: t("home"),
       to: "/",
     },
     {
-      title: "About akasia",
-      to: "/about",
+      title: t("about"),
+      to: `/${locale}/about`,
     },
     {
-      title: "How to Invest",
+      title: t("howInvest"),
       to: `/${locale}/investment`,
     },
     {
-      title: "Contact",
+      title: t("contact"),
       to: `/${locale}/contact`,
     },
   ];
 
   const legalLinks = [
     {
-      title: "Privacy Policy",
+      title: t("privacy"),
       to: "/privacy",
     },
   ];
@@ -107,7 +111,7 @@ const Footer = ({ locale }: { locale: string }) => {
             id="footer-quick"
             className="flex flex-col flex-1  w-full justify-center sm:justify-end sm:items-start gap-2"
           >
-            <h3 className="text-md">Quick Links</h3>
+            <h3 className="text-md">{t("quickLinks")}</h3>
             <ul className="flex  flex-col justify-center items-center sm:justify-start sm:items-start">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -122,7 +126,7 @@ const Footer = ({ locale }: { locale: string }) => {
             id="footer-services"
             className="flex flex-1 flex-col  w-full items-center justify-center sm:justify-start sm:items-start gap-2"
           >
-            <h3 className="text-md">Legal</h3>
+            <h3 className="text-md">{t("legal")}</h3>
             <ul className="flex flex-col justify-center items-center sm:justify-start sm:items-start">
               {legalLinks.map((link, index) => (
                 <li key={index}>
@@ -144,7 +148,7 @@ const Footer = ({ locale }: { locale: string }) => {
               className="flex flex-row w-full justify-center sm:justify-center items-center gap-1 text-sm"
             >
               <span className="font-medium text-sm text-gray-900 dark:text-white">
-                &copy; {new Date().getFullYear()} All rights reserved
+                {t("rightsReserved", { year: currentYear })}
               </span>
             </div>
             <div

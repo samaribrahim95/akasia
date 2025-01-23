@@ -83,5 +83,15 @@
     "ChangesPrivacyPolicyDes": "We may update this Privacy Policy from time to time, and any changes will be effective immediately upon posting the updated policy on our Site. We encourage you to review this Privacy Policy periodically to stay informed about our data practices.",
     "ContactInformation": "Contact Information",
     "ContactInformationDes": "If you have any questions or concerns about our Privacy Policy or our data practices, please contact us at"
+  },
+  "Footer": {
+    "home": "Home",
+    "about": "About akasia",
+    "howInvest": "How to Invest",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "quickLinks": "Quick Links",
+    "legal": "Legal",
+    "rightsReserved": "© 2016 - {year} All rights reserved"
   }
 }
