@@ -15,7 +15,7 @@ import moonIcon from "../assets/images/icons/moon.svg";
 
 import { useEffect } from "react";
 
-const Footer = () => {
+const Footer = ({ locale }: { locale: string }) => {
   const linksIcons = [
     {
       label: "our instagram",
@@ -48,11 +48,11 @@ const Footer = () => {
     },
     {
       title: "How to Invest",
-      to: "/investment",
+      to: `/${locale}/investment`,
     },
     {
       title: "Contact",
-      to: "/contactus",
+      to: `/${locale}/contact`,
     },
   ];
 
