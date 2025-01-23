@@ -8,7 +8,7 @@ import logoTxtLight from "../assets/images/akasia-txt-logo-light.svg";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 
-const Navbar = ({ locale } : {locale: string}) => {
+const Navbar = ({ locale }: { locale: string }) => {
   const t = useTranslations("NavBar");
   const pathname = usePathname();
   const router = useRouter();
@@ -29,16 +29,16 @@ const Navbar = ({ locale } : {locale: string}) => {
   ];
 
   const toggleLang = (newLocale: string) => {
-    const path = pathname.split("/").slice(2).join('/');
-    router.push(`/${newLocale}/${path}`)
-  }
+    const path = pathname.split("/").slice(2).join("/");
+    router.push(`/${newLocale}/${path}`);
+  };
 
   return (
-    <nav className="fixed w-full z-50 top-0 start-0 border-b h-[52px] border-gray-200 dark:border-gray-600">
+    <nav className="fixed w-full z-50 top-0 start-0 h-[52px] bg-white/30 backdrop-blur-md border-b-blue-900/5 dark:border-b-gray-100/5 border-b shadow-lg">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div id="nav-logo">
           <div className="hidden dark:flex">
-            <Link href='/'>
+            <Link href="/">
               <Image
                 alt="logo - akasia"
                 loading="lazy"
@@ -50,7 +50,7 @@ const Navbar = ({ locale } : {locale: string}) => {
             </Link>
           </div>
           <div className="flex dark:hidden">
-            <Link href='/'>
+            <Link href="/">
               <Image
                 alt="logo - akasia"
                 width="70"
