@@ -6,10 +6,10 @@ import Brief from "@/components/brief";
 export default function Home() {
   return (
     <>
-    <Header />
-    <Solutions />
-    <Brief />
-    <ContactInfo />
+      <Header />
+      <Brief />
+      <Solutions />
+      <ContactInfo />
     </>
   );
 }

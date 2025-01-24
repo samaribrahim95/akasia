@@ -18,78 +18,85 @@ import CheckIcon from "@/components/dynamicIcons/check";
 
 import AboutCards from "../../../components/aboutCards";
 import Solutions from "@/components/solutions";
+import BreadCrumb from "@/components/breadcrumb";
 
 const About = () => {
-  const t = useTranslations("About");
+  const t = useTranslations();
 
   const aboutAkasia = [
     {
-      title: t("ourVision"),
-      description: t("ourVisionDes"),
+      title: t("About.ourVision"),
+      description: t("About.ourVisionDes"),
       icon: VisionIcon,
     },
     {
-      title: t("ourMission"),
-      description: t("ourMissionDes"),
+      title: t("About.ourMission"),
+      description: t("About.ourMissionDes"),
       icon: MissionIcon,
     },
   ];
 
   const aboutPoints = [
     {
-      title: t("akasia"),
-      description: t("financialPartner"),
+      title: t("About.akasia"),
+      description: t("About.financialPartner"),
       icon: RobotIcon,
     },
     {
-      title: t("towardsFuture"),
-      description: t("towardsFutureDes"),
+      title: t("About.towardsFuture"),
+      description: t("About.towardsFutureDes"),
       icon: LikeIcon,
     },
     {
-      title: t("innovationTrust"),
-      description: t("innovationTrustDes"),
+      title: t("About.innovationTrust"),
+      description: t("About.innovationTrustDes"),
       icon: BookIcon,
     },
     {
-      title: t("strongKnowledge"),
-      description: t("strongKnowledgeDes"),
+      title: t("About.strongKnowledge"),
+      description: t("About.strongKnowledgeDes"),
       icon: UsersIcon,
     },
   ];
 
   const featuresAkasia = [
     {
-      feature: t("feature1"),
+      feature: t("About.feature1"),
       icon: CheckIcon,
     },
     {
-      feature: t("feature2"),
+      feature: t("About.feature2"),
       icon: CheckIcon,
     },
     {
-      feature: t("feature3"),
+      feature: t("About.feature3"),
       icon: CheckIcon,
     },
     {
-      feature: t("feature4"),
+      feature: t("About.feature4"),
       icon: CheckIcon,
     },
     {
-      feature: t("feature5"),
+      feature: t("About.feature5"),
       icon: CheckIcon,
     },
     {
-      feature: t("feature6"),
+      feature: t("About.feature6"),
       icon: CheckIcon,
     },
   ];
 
-
-
   return (
     <div>
-      <h1 className=""> {t("title")}</h1>
+      <BreadCrumb data={[{
+        link: '/',
+        text: t("Home.siteName")
+      },
+      {
+        link: '#',
+        text: t("About.title")
+      }]} />
+      <h1 className=""> {t("About.title")}</h1>
       <Image
         src={aboutImg}
         className="w-full object-cover rounded-xl mt-5"
@@ -99,9 +106,9 @@ const About = () => {
         <div className="lg:col-span-2">
           <div>
             <h2 className="uppercase font-bold text-2xl md:text-3xl">
-              {t("newVision")}
+              {t("About.newVision")}
             </h2>
-            <p className="md:max-w-[800px]">{t("newVisionDes")}</p>
+            <p className="md:max-w-[800px]">{t("About.newVisionDes")}</p>
           </div>
         </div>
         <div className="lg:col-span-2">
@@ -124,12 +131,12 @@ const About = () => {
           <div className="w-full lg:w-1/2 flex-1">
             <div className="lg:max-w-lg mb-16 lg:mb-0">
               <h2 className="text-3xl lg:text-4xl">
-                {t("innovativeInvestmentPaths")}
+                {t("About.innovativeInvestmentPaths")}
               </h2>
               <div className="space-y-5">
                 <div className="w-full lg:mt-8 bg-transparent border rounded-xl lg:max-w-sm border-gray-200 dark:border-gray-500"></div>
                 <p className="flex items-start justify-start me-10">
-                  {t("innovativeInvestmentPathsDes")}
+                  {t("About.innovativeInvestmentPathsDes")}
                 </p>
               </div>
             </div>

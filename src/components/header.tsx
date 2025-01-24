@@ -13,15 +13,15 @@ const Header = () => {
     <div className="relative min-h-svh flex flex-col justify-between pb-8">
       <BluredBg />
       <div className="grid flex-1 mb-6">
-        <div className="h-full flex items-center justify-center">
+        <div className="flex items-center justify-center">
           <div>
             <canvas
               id="gradient-canvas"
               data-js-darken-top="true"
               data-transition-in="true"
               width="983"
-              height="600"
-              className="mx-auto"
+              height="230"
+              className="mx-auto max-w-full"
             ></canvas>
             <div className="mt-8 text-center">
               <h1 className="font-bold text-2xl	mb-4">{t("title")}</h1>
@@ -57,18 +57,18 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 md:place-items-center justify-between gap-4">
+      <div className="flex flex-wrap md:flex-nowrap md:place-items-center md:justify-between gap-4">
         <p className="flex items-center">
           <FileTrueIcon />
-          <span className="mx-2 font-medium">{t("licensedByFinancial")}</span>
+          <span className="text-sm mx-2 font-medium">{t("licensedByFinancial")}</span>
         </p>
         <p className="flex items-center">
           <CircleTrueIcon />
-          <span className="mx-2 font-medium">{t("compliantIslamic")}</span>
+          <span className="text-sm mx-2 font-medium">{t("compliantIslamic")}</span>
         </p>
         <p className="flex items-center">
           <AwardIcon />
-          <span className="mx-2 font-medium">{t("transparency")}</span>
+          <span className="text-sm mx-2 font-medium">{t("transparency")}</span>
         </p>
       </div>
     </div>

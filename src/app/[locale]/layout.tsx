@@ -31,11 +31,11 @@ export default async function RootLayout({
   const messages = await getMessages();
   return (
     <html lang={locale} dir={locale == "ar" ? "rtl" : "ltr"}>
-      <body className="w-full h-full min-h-screen relative text-gray-600 dark:bg-gray-950 dark:text-gray-200">
+      <body className="text-gray-600 dark:bg-gray-950 dark:text-gray-200">
         <NextIntlClientProvider messages={messages}>
           <div>
             <Navbar locale={locale} />
-            <div className="container md:max-w-[1000px] mx-auto pt-[80px] mb-[50px] px-5">
+            <div className="container mt-20">
               {children}
             </div>
             <Footer locale={locale} />
