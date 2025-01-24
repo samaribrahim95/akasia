@@ -4,9 +4,13 @@
 import { useTranslations } from "next-intl";
 
 import Image from "next/image";
+import Link from "next/link";
+
 import investmentImage from "../../../assets/images/invesment.jpg";
 import invesmentImage2 from "../../../assets/images/invesment-2.jpg";
-
+import downloadApp from "../../../assets/images/appIcons.png";
+import playStore from "../../../assets/images/play-store-icon-v.png";
+import appStore from "../../../assets/images/app-store-icon.png";
 import DownloadIcon from "@/components/dynamicIcons/download";
 import TimerIcon from "@/components/dynamicIcons/timer";
 import StarsIcon from "@/components/dynamicIcons/starts";
@@ -16,8 +20,8 @@ const Investment = () => {
 
   const investmentSetps = [
     {
-      title: t("downloadApp"),
-      description: t("downloadAppDes"),
+      title: t("doDownloadApp"),
+      description: t("doDownloadAppDes"),
       icon: DownloadIcon,
     },
     {
@@ -35,12 +39,31 @@ const Investment = () => {
   return (
     <div>
       <h1 className=""> {t("title")}</h1>
+      {/* <video className="h-full w-full rounded-lg" controls autoPlay>
+      <source src="https://docs.material-tailwind.com/demo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video> */}
       <Image
         src={investmentImage}
-        className="w-full object-cover rounded-xl mt-5"
+        className="w-full object-cover rounded-xl mt-5 animate-fade-in"
         alt="Investment"
       />
-      <section className="mt-16">
+      <section className="py-16 grid gap-8 md:gap-12 animate-slide-in-top">
+        <div className="justify-items-center">
+          <h3 className="text-xl text-gray-800 font-bold sm:text-3xl dark:text-gray-200 mb-6">
+            {t("downloadSlogn")}
+          </h3>
+          <Link href="#">
+            <Image
+              className="mx-auto px-4 w-[200px]"
+              src={downloadApp}
+              alt=""
+            />
+          </Link>
+        </div>
+      </section>
+
+      <section className="mt-16 animate-slide-in-bottom">
         <div className="relative z-20 lg:grid lg:gap-12 lg:items-center">
           <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-6 lg:order-2">
             <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-6 lg:order-2">
@@ -89,6 +112,16 @@ const Investment = () => {
             </div>
           </div>
         </div>
+        <button className="bg-gradient-to-bl from-slate-500 to-indigo-200 hover:bg-blue-200 text-white font-bold py-3 px-3 inline-flex items-center rounded-full">
+          <svg
+            className="fill-current w-4 h-4 mx-1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+          </svg>
+          <span>{t("downloadApp")}</span>
+        </button>
       </section>
     </div>
   );
