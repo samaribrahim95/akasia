@@ -41,7 +41,7 @@ const Investment = () => {
         alt="Investment"
       />
       <section className="mt-16">
-        <div className="relative z-50 lg:grid lg:gap-12 lg:items-center">
+        <div className="relative z-20 lg:grid lg:gap-12 lg:items-center">
           <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-6 lg:order-2">
             <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-6 lg:order-2">
               <div className="bg-gray-100 w-full h-5/6 rounded-xl sm:h-3/4 lg:h-full dark:bg-white/[.075] py-[30px] ps-[50px] pe-4">

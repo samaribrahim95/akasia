@@ -4,7 +4,7 @@
 import { useTranslations } from "next-intl";
 
 import Image from "next/image";
-import aboutImg from "../../../assets/images/about.jpg"
+import aboutImg from "../../../assets/images/about.jpg";
 import aboutImg2 from "../../../assets/images/about-2.jpg";
 
 import MissionIcon from "@/components/dynamicIcons/mission";
@@ -164,7 +164,7 @@ const About = () => {
       </section>
 
       <section className="gap-8 py-16 z-20">
-        <div className="flex flex-col-reverse  md:flex-row-reverse gap-4 justify-center items-stretch relative z-50 ">
+        <div className="flex flex-col-reverse  md:flex-row-reverse gap-4 justify-center items-stretch relative z-20 ">
           {aboutAkasia.map((item, index) => (
             <AboutCards
               key={index}
