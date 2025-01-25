@@ -5,6 +5,7 @@ import Image from "next/image";
 import contactImage from "../../../assets/images/contact.jpg";
 import ContactInfo from "@/components/contactInfo";
 import BreadCrumb from "@/components/breadcrumb";
+import BluredBg from "@/components/blueredBg";
 
 const Contact = () => {
   const t = useTranslations();
@@ -24,6 +25,7 @@ const Contact = () => {
         className="w-full object-cover rounded-xl mt-5"
         alt="Contact Akasia"
       />
+      <BluredBg />
       <ContactInfo />
     </div>
   );

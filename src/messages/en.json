@@ -12,11 +12,12 @@
     "learnMore": "Learn More",
     "compliantIslamic": "Compliant with Islamic Sharia",
     "transparency": "Transparency, Security, and Innovation",
-    "licensedByFinancial": "Licensed by the Financial Market Authority",
+    "licensedByFinancial": "Permitted from SAMA and CMA",
     "akasiaCapital": "Akasia Capital",
     "akasiaDescription1": "According to the statistics of the Saudi Financial Sector Development Program, it appears that about 45% of Saudi citizens do not have savings, and 80% do not have investment plans.",
     "akasiaDescription2": "To address these challenges and financially empower citizens, the akasia app was designed to support users by helping them to establish sustainable financial plans and facilitate the processes of saving and investing.",
-    "akasiaDescription3": "akasia is a financial technology company licensed by the Saudi Central Bank to provide its services aimed at facilitating money management and financial planning for users through an integrated platform, in order to achieve the Kingdom's Vision 2030 goals of financially empowering citizens."
+    "akasiaDescription3": "akasia is a financial technology company licensed by the Saudi Central Bank to provide its services aimed at facilitating money management and financial planning for users through an integrated platform, in order to achieve the Kingdom's Vision 2030 goals of financially empowering citizens.",
+    "downloadApp": "Download App"
   },
   "About": {
     "title": "About Akasia Capital",
@@ -51,8 +52,10 @@
   },
   "Investment": {
     "title": "How to Start Investing with Akasia",
-    "downloadApp": "Download the App",
-    "downloadAppDes": "Search for the Akasia app in the app store on your phone, whether it's Android or iOS, then download and install it.",
+    "downloadApp": "Download App",
+    "downloadSlogn": "Download the app now and start your journey to grow your wealth.",
+    "doDownloadApp": "Download the App",
+    "doDownloadAppDes": "Search for the Akasia app in the app store on your phone, whether it's Android or iOS, then download and install it.",
     "Register": "Register",
     "RegisterDes": "After installing the app, open it and enter your basic information such as your ID or residency number and password.",
     "investmentPortfolio": "Choose Your Investment Portfolio",

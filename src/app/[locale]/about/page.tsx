@@ -4,7 +4,7 @@
 import { useTranslations } from "next-intl";
 
 import Image from "next/image";
-import aboutImg from "../../../assets/images/about.jpg"
+import aboutImg from "../../../assets/images/about.jpg";
 import aboutImg2 from "../../../assets/images/about-2.jpg";
 
 import MissionIcon from "@/components/dynamicIcons/mission";
@@ -19,6 +19,7 @@ import CheckIcon from "@/components/dynamicIcons/check";
 import AboutCards from "../../../components/aboutCards";
 import Solutions from "@/components/solutions";
 import BreadCrumb from "@/components/breadcrumb";
+import BluredBg from "@/components/blueredBg";
 
 const About = () => {
   const t = useTranslations();
@@ -102,6 +103,7 @@ const About = () => {
         className="w-full object-cover rounded-xl mt-5"
         alt="About Akasia"
       />
+      <BluredBg />
       <section className="py-16 grid lg:grid-cols-2 gap-8 lg:gap-12">
         <div className="lg:col-span-2">
           <div>
@@ -164,7 +166,7 @@ const About = () => {
       </section>
 
       <section className="gap-8 py-16 z-20">
-        <div className="flex flex-col-reverse  md:flex-row-reverse gap-4 justify-center items-stretch relative z-50 ">
+        <div className="flex flex-col-reverse  md:flex-row-reverse gap-4 justify-center items-stretch relative z-20 ">
           {aboutAkasia.map((item, index) => (
             <AboutCards
               key={index}

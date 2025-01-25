@@ -1,5 +1,5 @@
-import Link from "next/link"
-import MailIcon from "./dynamicIcons/mail"
+import Link from "next/link";
+import MailIcon from "./dynamicIcons/mail";
 import { useTranslations } from "next-intl";
 
 const ContactInfo = () => {
@@ -42,7 +42,7 @@ const ContactInfo = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ContactInfo
+export default ContactInfo;

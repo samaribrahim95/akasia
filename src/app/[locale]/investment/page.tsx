@@ -4,9 +4,11 @@
 import { useTranslations } from "next-intl";
 
 import Image from "next/image";
+import Link from "next/link";
 import investmentImage from "../../../assets/images/invesment.jpg";
 import invesmentImage2 from "../../../assets/images/invesment-2.jpg";
-
+import BluredBg from "@/components/blueredBg";
+import downloadApp from "../../../assets/images/appIcons.png";
 import DownloadIcon from "@/components/dynamicIcons/download";
 import TimerIcon from "@/components/dynamicIcons/timer";
 import StarsIcon from "@/components/dynamicIcons/starts";
@@ -46,11 +48,27 @@ const Investment = () => {
       <h1 className=""> {t("Investment.title")}</h1>
       <Image
         src={investmentImage}
-        className="w-full object-cover rounded-xl mt-5"
+        className="w-full object-cover rounded-xl mt-5 animate-fade-in"
         alt="Investment"
       />
-      <section className="mt-16">
-        <div className="relative z-50 lg:grid lg:gap-12 lg:items-center">
+      <BluredBg />
+      <section className="py-16 grid gap-8 md:gap-12 animate-slide-in-top">
+        <div className="justify-items-center">
+          <h3 className="text-xl text-gray-800 font-bold sm:text-3xl dark:text-gray-200 mb-6">
+            {t("Investment.downloadSlogn")}
+          </h3>
+          <Link href="#">
+            <Image
+              className="mx-auto px-4 w-[140px] sm:w-[180px]"
+              src={downloadApp}
+              alt=""
+            />
+          </Link>
+        </div>
+      </section>
+
+      <section className="py-16 animate-slide-in-bottom">
+        <div className="relative z-20 lg:grid lg:gap-12 lg:items-center">
           <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-6 lg:order-2">
             <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-6 lg:order-2">
               <div className="bg-gray-100 w-full h-5/6 rounded-xl sm:h-3/4 lg:h-full dark:bg-white/[.075] py-[30px] ps-[50px] pe-4">
