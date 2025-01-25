@@ -19,8 +19,8 @@ const Investment = () => {
 
   const investmentSetps = [
     {
-      title: t("Investment.downloadApp"),
-      description: t("Investment.downloadAppDes"),
+      title: t("Investment.doDownloadApp"),
+      description: t("Investment.doDownloadAppDes"),
       icon: DownloadIcon,
     },
     {
@@ -37,14 +37,18 @@ const Investment = () => {
 
   return (
     <div className="mt-20">
-      <BreadCrumb data={[{
-        link: '/',
-        text: t("Home.siteName")
-      },
-      {
-        link: '#',
-        text: t("Investment.title")
-      }]} />
+      <BreadCrumb
+        data={[
+          {
+            link: "/",
+            text: t("Home.siteName"),
+          },
+          {
+            link: "#",
+            text: t("Investment.title"),
+          },
+        ]}
+      />
       <h1 className=""> {t("Investment.title")}</h1>
       <Image
         src={investmentImage}

@@ -89,14 +89,18 @@ const About = () => {
 
   return (
     <div className="mt-20">
-      <BreadCrumb data={[{
-        link: '/',
-        text: t("Home.siteName")
-      },
-      {
-        link: '#',
-        text: t("About.title")
-      }]} />
+      <BreadCrumb
+        data={[
+          {
+            link: "/",
+            text: t("Home.siteName"),
+          },
+          {
+            link: "#",
+            text: t("About.title"),
+          },
+        ]}
+      />
       <h1> {t("About.title")}</h1>
       <Image
         src={aboutImg}
@@ -165,7 +169,13 @@ const About = () => {
         </div>
       </section>
 
-      <section className="gap-8 py-16 z-20">
+      <section className="gap-8 py-16 z-20 relative">
+        <div
+          className="absolute blur-3xl overflow-hidden sm:-top-20"
+          aria-hidden="true"
+        >
+          <div className="gradient-box-light relative left-[calc(50%-10rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[0deg]   sm:left-[calc(50%-10rem)] sm:w-[72.1875rem] "></div>
+        </div>
         <div className="flex flex-col-reverse  md:flex-row-reverse gap-4 justify-center items-stretch relative z-20 ">
           {aboutAkasia.map((item, index) => (
             <AboutCards
