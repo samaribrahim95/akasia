@@ -58,13 +58,19 @@ const Header = () => {
                   <Image src={screen1} alt="" className="w-90" />
                 </div>
                 <div className="flex flex-col justify-center md:col-span-2 ">
+                  <div className="flex flex-row justify-start mb-8">
+                    <div className="h-[60px] mx-1 bg-gray-100 rounded-xl dark:bg-white/[.075] flex items-center justify-center cursor-pointer">
+                      <Image
+                        src={CMA}
+                        alt=""
+                        className="w-full py-4 px-6 h-90"
+                      />
+                    </div>
+                    <div className="h-[60px] mx-1 bg-gray-100 rounded-xl dark:bg-white/[.075] flex items-center justify-center cursor-pointer">
+                      <Image src={SCB} alt="" className="py-4 px-6" />
+                    </div>
+                  </div>
                   <div className="flex flex-col mb-6">
-                    <p className="flex items-center mb-3">
-                      <FileTrueIcon />
-                      <span className="text-sm mx-2 font-medium text-gray-800 dark:text-gray-200">
-                        {t("licensedByFinancial")}
-                      </span>
-                    </p>
                     <p className="flex items-center mb-3">
                       <CircleTrueIcon />
                       <span className="text-sm mx-2 font-medium text-gray-800 dark:text-gray-200">
@@ -77,18 +83,6 @@ const Header = () => {
                         {t("transparency")}
                       </span>
                     </p>
-                  </div>
-                  <div className="flex flex-row justify-start mb-8">
-                    <div className="h-[60px] mx-1 bg-gray-100 rounded-xl dark:bg-white/[.075] flex items-center justify-center cursor-pointer">
-                      <Image
-                        src={CMA}
-                        alt=""
-                        className="w-full py-4 px-6 h-90"
-                      />
-                    </div>
-                    <div className="h-[60px] mx-1 bg-gray-100 rounded-xl dark:bg-white/[.075] flex items-center justify-center cursor-pointer">
-                      <Image src={SCB} alt="" className="py-4 px-6" />
-                    </div>
                   </div>
                   <div className="text-center md:text-start">
                     <button className="bg-gradient-to-bl from-slate-500 to-indigo-300 hover:bg-blue-200 text-white py-3 px-4 inline-flex items-center rounded-full">

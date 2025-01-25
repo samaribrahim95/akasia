@@ -104,7 +104,12 @@ const Navbar = ({ locale }: { locale: string }) => {
                 onClick={() => toggleLang(locale == "ar" ? "en" : "ar")}
                 className="font-medium text-black dark:text-slate-100"
               >
-                {locale == "ar" ? "english" : "العربية"}
+                {locale == "ar" ? "EN" : "ع"}
+              </button>
+            </li>
+            <li>
+              <button className="bg-gradient-to-bl from-slate-500 to-indigo-300 hover:bg-blue-200 text-white py-1 px-3 inline-flex items-center rounded-full">
+                <span>{t("downloadApp")}</span>
               </button>
             </li>
           </ul>

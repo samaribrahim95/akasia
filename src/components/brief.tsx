@@ -10,7 +10,7 @@ const Brief = () => {
         {t("akasiaCapital")}
       </h3>
       <div className="grid gid-cols-1 md:grid-cols-2 gap-6">
-        <div>
+        <div className="flex flex-col justify-center">
           <p className="mb-4">{t("akasiaDescription1")}</p>
           <p className="mb-4">{t("akasiaDescription2")}</p>
           <p>{t("akasiaDescription3")}</p>

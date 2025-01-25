@@ -3,20 +3,22 @@
     "home": "Home",
     "about": "About akasia",
     "howInvest": "How to Invest",
-    "contact": "Contact"
+    "blog": "Blog",
+    "contact": "Contact",
+    "downloadApp": "Download App"
   },
   "Home": {
     "siteName": "Akasia",
     "title": "akasia, Your Pathway to Financial Prosperity",
-    "description": "A financial technology company licensed by the Saudi Central Bank to provide services aimed at facilitating money management and financial planning.",
+    "description": "A financial technology company premitted by the Saudi Central Bank and Capital Market Authority to provide services aimed at facilitating financial management and financial planning and investment.",
     "learnMore": "Learn More",
     "compliantIslamic": "Compliant with Islamic Sharia",
     "transparency": "Transparency, Security, and Innovation",
     "licensedByFinancial": "Permitted from SAMA and CMA",
     "akasiaCapital": "Akasia Capital",
     "akasiaDescription1": "According to the statistics of the Saudi Financial Sector Development Program, it appears that about 45% of Saudi citizens do not have savings, and 80% do not have investment plans.",
-    "akasiaDescription2": "To address these challenges and financially empower citizens, the akasia app was designed to support users by helping them to establish sustainable financial plans and facilitate the processes of saving and investing.",
-    "akasiaDescription3": "akasia is a financial technology company licensed by the Saudi Central Bank to provide its services aimed at facilitating money management and financial planning for users through an integrated platform, in order to achieve the Kingdom's Vision 2030 goals of financially empowering citizens.",
+    "akasiaDescription2": "To address these challenges and financially empower citizens, the akasia app was designed to support users with the aim of assisting users in setting investment goals that align with their personal aspirations and wealth growth.",
+    "akasiaDescription3": "Akasia is a fintech company premitted by the Saudi Central Bank and the Capital Market Authority to provide services aimed at facilitating personal wealth growth and money management.",
     "downloadApp": "Download App"
   },
   "About": {
@@ -41,9 +43,9 @@
     "feature6": "Advanced Technology",
     "provideSolutions": "We provide a range of integrated financial solutions to help achieve your goals",
     "solution1": "Specialized management and continuous monitoring of investments.",
-    "solution2": "A diverse portfolio of local and international investment opportunities.",
+    "solution2": "Diversified investment portfolios tailored to suit all clients.",
     "solution3": "Innovative tools for tracking the performance of your investments.",
-    "solution4": "Comprehensive financial consulting from our specialized team.",
+    "solution4": "Robo-advisory to suggest the best investment options for customers.",
     "solution5": "Investing in accordance with the provisions of Islamic Sharia.",
     "ourVision": "Our Vision",
     "ourVisionDes": "We work according to our vision to build long-term trusting relationships with our clients, by providing specialized consulting services and safe, diverse investment solutions. We focus on empowering individuals to access the best investment opportunities, while adhering to Islamic Sharia provisions. This is aimed at building more financially aware generations capable of achieving their future aspirations.",
@@ -89,6 +91,8 @@
     "ContactInformationDes": "If you have any questions or concerns about our Privacy Policy or our data practices, please contact us at"
   },
   "Footer": {
+    "startYourTrip": "Start your journey to achieving your goals now.",
+    "startYourTripDes": "The akasia app was designed to support users by helping them to develop sustainable financial plans, and facilitate the process of investing.",
     "home": "Home",
     "about": "About akasia",
     "howInvest": "How to Invest",
