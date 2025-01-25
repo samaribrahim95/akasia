@@ -88,14 +88,18 @@ const About = () => {
 
   return (
     <div>
-      <BreadCrumb data={[{
-        link: '/',
-        text: t("Home.siteName")
-      },
-      {
-        link: '#',
-        text: t("About.title")
-      }]} />
+      <BreadCrumb
+        data={[
+          {
+            link: "/",
+            text: t("Home.siteName"),
+          },
+          {
+            link: "#",
+            text: t("About.title"),
+          },
+        ]}
+      />
       <h1 className=""> {t("About.title")}</h1>
       <Image
         src={aboutImg}
