@@ -35,7 +35,9 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <div>
             <Navbar locale={locale} />
-            <div className="container mt-20">{children}</div>
+            <div className="w-full max-w-96 px-4 sm:px-0 sm:max-w-[1000px] mx-auto sm:container mt-20">
+              {children}
+            </div>
             <Footer locale={locale} />
           </div>
         </NextIntlClientProvider>

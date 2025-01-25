@@ -8,6 +8,10 @@ import Link from "next/link";
 
 import investmentImage from "../../../assets/images/invesment.jpg";
 import invesmentImage2 from "../../../assets/images/invesment-2.jpg";
+import CMA from "../../../assets/images/cma.svg";
+import SCB from "../../../assets/images/scb.svg";
+import screen1 from "../../../assets/images/screen-1.png";
+
 import downloadApp from "../../../assets/images/appIcons.png";
 import playStore from "../../../assets/images/play-store-icon-v.png";
 import appStore from "../../../assets/images/app-store-icon.png";
@@ -55,7 +59,7 @@ const Investment = () => {
           </h3>
           <Link href="#">
             <Image
-              className="mx-auto px-4 w-[200px]"
+              className="mx-auto px-4 w-[140px] sm:w-[180px]"
               src={downloadApp}
               alt=""
             />
@@ -112,16 +116,6 @@ const Investment = () => {
             </div>
           </div>
         </div>
-        <button className="bg-gradient-to-bl from-slate-500 to-indigo-200 hover:bg-blue-200 text-white font-bold py-3 px-3 inline-flex items-center rounded-full">
-          <svg
-            className="fill-current w-4 h-4 mx-1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
-          </svg>
-          <span>{t("downloadApp")}</span>
-        </button>
       </section>
     </div>
   );

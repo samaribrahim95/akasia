@@ -1,10 +1,17 @@
 import BookIcon from "@/components/dynamicIcons/book";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 const Solutions = () => {
   const t = useTranslations("About");
 
-  const solutionsAkasia = [t("solution1"), t("solution2"), t("solution3"), t("solution4"), t("solution5")];
+  const solutionsAkasia = [
+    t("solution1"),
+    t("solution2"),
+    t("solution3"),
+    t("solution4"),
+    t("solution5"),
+  ];
   return (
     <section className="gap-8 py-16 overflow-hidden">
       <div className="relative ">
@@ -32,7 +39,7 @@ const Solutions = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Solutions
+export default Solutions;
