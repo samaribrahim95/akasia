@@ -9,9 +9,7 @@ import BreadCrumb from "@/components/breadcrumb";
 
 import investmentImage from "../../../assets/images/invesment.jpg";
 import invesmentImage2 from "../../../assets/images/invesment-2.jpg";
-import CMA from "../../../assets/images/cma.svg";
-import SCB from "../../../assets/images/scb.svg";
-import screen1 from "../../../assets/images/screen-1.png";
+import BluredBg from "@/components/blueredBg";
 
 import downloadApp from "../../../assets/images/appIcons.png";
 import playStore from "../../../assets/images/play-store-icon-v.png";
@@ -42,7 +40,7 @@ const Investment = () => {
   ];
 
   return (
-    <div>
+    <div className="relative min-h-svh flex flex-col justify-between">
       <BreadCrumb
         data={[
           {
@@ -55,6 +53,7 @@ const Investment = () => {
           },
         ]}
       />
+
       <h1 className=""> {t("Investment.title")}</h1>
       {/* <video className="h-full w-full rounded-lg" controls autoPlay>
       <source src="https://docs.material-tailwind.com/demo.mp4" type="video/mp4" />
@@ -65,6 +64,7 @@ const Investment = () => {
         className="w-full object-cover rounded-xl mt-5 animate-fade-in"
         alt="Investment"
       />
+      <BluredBg />
       <section className="py-16 grid gap-8 md:gap-12 animate-slide-in-top">
         <div className="justify-items-center">
           <h3 className="text-xl text-gray-800 font-bold sm:text-3xl dark:text-gray-200 mb-6">
@@ -80,7 +80,7 @@ const Investment = () => {
         </div>
       </section>
 
-      <section className="mt-16 animate-slide-in-bottom">
+      <section className="py-16 animate-slide-in-bottom">
         <div className="relative z-20 lg:grid lg:gap-12 lg:items-center">
           <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-6 lg:order-2">
             <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-6 lg:order-2">

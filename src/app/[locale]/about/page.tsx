@@ -19,6 +19,7 @@ import CheckIcon from "@/components/dynamicIcons/check";
 import AboutCards from "../../../components/aboutCards";
 import Solutions from "@/components/solutions";
 import BreadCrumb from "@/components/breadcrumb";
+import BluredBg from "@/components/blueredBg";
 
 const About = () => {
   const t = useTranslations();
@@ -106,6 +107,7 @@ const About = () => {
         className="w-full object-cover rounded-xl mt-5"
         alt="About Akasia"
       />
+      <BluredBg />
       <section className="py-16 grid lg:grid-cols-2 gap-8 lg:gap-12">
         <div className="lg:col-span-2">
           <div>
