@@ -17,3 +17,8 @@
     }
   }
 
+
+
+#gradient-canvas {
+  -webkit-mask: url('../images/logo.svg') center / contain no-repeat;
+}

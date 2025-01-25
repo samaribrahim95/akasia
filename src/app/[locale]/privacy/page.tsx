@@ -9,7 +9,7 @@ import privacyImage from "../../../assets/images/privacy.jpg";
 const Privacy = () => {
   const t = useTranslations("Privacy");
   return (
-    <div>
+    <div className="mt-20">
       <h1 className="">{t("title")}</h1>
       <Image
         src={privacyImage}

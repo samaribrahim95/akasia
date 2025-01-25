@@ -87,7 +87,7 @@ const About = () => {
   ];
 
   return (
-    <div>
+    <div className="mt-20">
       <BreadCrumb data={[{
         link: '/',
         text: t("Home.siteName")
@@ -96,7 +96,7 @@ const About = () => {
         link: '#',
         text: t("About.title")
       }]} />
-      <h1 className=""> {t("About.title")}</h1>
+      <h1> {t("About.title")}</h1>
       <Image
         src={aboutImg}
         className="w-full object-cover rounded-xl mt-5"

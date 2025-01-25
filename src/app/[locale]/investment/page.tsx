@@ -10,31 +10,40 @@ import invesmentImage2 from "../../../assets/images/invesment-2.jpg";
 import DownloadIcon from "@/components/dynamicIcons/download";
 import TimerIcon from "@/components/dynamicIcons/timer";
 import StarsIcon from "@/components/dynamicIcons/starts";
+import BreadCrumb from "@/components/breadcrumb";
 
 const Investment = () => {
-  const t = useTranslations("Investment");
+  const t = useTranslations();
 
   const investmentSetps = [
     {
-      title: t("downloadApp"),
-      description: t("downloadAppDes"),
+      title: t("Investment.downloadApp"),
+      description: t("Investment.downloadAppDes"),
       icon: DownloadIcon,
     },
     {
-      title: t("Register"),
-      description: t("RegisterDes"),
+      title: t("Investment.Register"),
+      description: t("Investment.RegisterDes"),
       icon: TimerIcon,
     },
     {
-      title: t("investmentPortfolio"),
-      description: t("investmentPortfolioDes"),
+      title: t("Investment.investmentPortfolio"),
+      description: t("Investment.investmentPortfolioDes"),
       icon: StarsIcon,
     },
   ];
 
   return (
-    <div>
-      <h1 className=""> {t("title")}</h1>
+    <div className="mt-20">
+      <BreadCrumb data={[{
+        link: '/',
+        text: t("Home.siteName")
+      },
+      {
+        link: '#',
+        text: t("Investment.title")
+      }]} />
+      <h1 className=""> {t("Investment.title")}</h1>
       <Image
         src={investmentImage}
         className="w-full object-cover rounded-xl mt-5"
@@ -46,7 +55,7 @@ const Investment = () => {
             <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-6 lg:order-2">
               <div className="bg-gray-100 w-full h-5/6 rounded-xl sm:h-3/4 lg:h-full dark:bg-white/[.075] py-[30px] ps-[50px] pe-4">
                 <h2 className="text-2xl text-gray-800 font-bold sm:text-3xl dark:text-gray-200">
-                  {t("title")}
+                  {t("Investment.title")}
                 </h2>
                 <nav className="grid gap-4 mt-5 md:mt-10">
                   {investmentSetps.map((item, index) => (

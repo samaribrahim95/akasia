@@ -5,6 +5,7 @@ import Navbar from "@/layout/navbar";
 import "../../assets/css/index.css";
 import { LocalesType, routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import StartYourTrip from "@/components/startYourTrip";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -35,8 +36,9 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <div>
             <Navbar locale={locale} />
-            <div className="container mt-20">
+            <div className="container">
               {children}
+              <StartYourTrip />
             </div>
             <Footer locale={locale} />
           </div>

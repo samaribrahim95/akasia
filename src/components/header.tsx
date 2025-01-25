@@ -6,23 +6,18 @@ import XIcon from "@/components/dynamicIcons/x";
 import { useTranslations } from "next-intl";
 import BluredBg from "@/components/blueredBg";
 import Link from "next/link";
+import WaveAnimation from "./waves";
 
 const Header = () => {
   const t = useTranslations("Home");
+
   return (
     <div className="relative min-h-svh flex flex-col justify-between pb-8">
       <BluredBg />
       <div className="grid flex-1 mb-6">
         <div className="flex items-center justify-center">
           <div>
-            <canvas
-              id="gradient-canvas"
-              data-js-darken-top="true"
-              data-transition-in="true"
-              width="983"
-              height="230"
-              className="mx-auto max-w-full"
-            ></canvas>
+            <WaveAnimation />
             <div className="mt-8 text-center">
               <h1 className="font-bold text-2xl	mb-4">{t("title")}</h1>
               <p className="text-md font-light max-w-lg mx-auto">
