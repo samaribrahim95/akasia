@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const MobileMenu = ({ opened }: { opened: boolean }) => {
   return (
     <div className={`absolute ${opened ? 'left-0' : 'left-full'} top-0 w-full h-[100dvh] flex flex-col items-center p-3 transition-all duration-500 ease-in-out backdrop-blur-xl bg-black z-[49]`}>
@@ -5,19 +7,19 @@ const MobileMenu = ({ opened }: { opened: boolean }) => {
         <div>
           <ul>
             <li id="f-about" className="mt-3 flex flex-col justify-center gap-2 items-start sm:justify-start sm:items-start">
-              <a href="/about/">
+              <Link href="/about/">
                 <h4 className="text-gray-900 dark:text-gray-50">About Akasia Capital</h4>
-              </a>
+              </Link>
             </li>
             <li id="f-solutions" className="mt-3 flex flex-col justify-center gap-2 items-start sm:justify-start sm:items-start">
-              <a href="/investment/">
+              <Link href="/investment/">
                 <h4 className="text-gray-900 dark:text-gray-50">How to Invest</h4>
-              </a>
+              </Link>
             </li>
             <li id="f-ContactUs" className="mt-3 flex flex-col justify-center gap-2 items-start sm:justify-start sm:items-start">
-              <a href="/contactus/">
+              <Link href="/contactus/">
                 <h4 className="text-gray-900 dark:text-gray-50">Contact</h4>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -26,19 +28,19 @@ const MobileMenu = ({ opened }: { opened: boolean }) => {
             <h4 className="text-gray-900 dark:text-gray-50">Contact</h4>
             <ul>
               <li>
-                <a href="tel:+966114792233">
+                <Link href="tel:+966114792233">
                   <span className="text-gray-900 dark:text-gray-50">Phone: +966114442233</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="mailto:info@getakasia.com">
+                <Link href="mailto:info@getakasia.com">
                   <span className="text-gray-900 dark:text-gray-50">Email: info@getakasia.com</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#">
+                <Link href="/#">
                   <span className="text-gray-900 dark:text-gray-50">Riyadh, Al Malqa, Saudi Arabia</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -60,7 +62,7 @@ const MobileMenu = ({ opened }: { opened: boolean }) => {
                   </svg>
                 </div>
               </button>
-            </a>
+            </Link>
             <div className="flex flex-row items-center justify-centers gap-2">
               <button className="font-rubik text-black dark:text-white">
                 <span className="font-semibold">العربية</span>
