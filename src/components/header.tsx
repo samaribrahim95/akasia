@@ -27,7 +27,7 @@ const Header = () => {
                 {t("description")}
               </p>
             </div>
-            <div className="my-8">
+            <div className="mt-8 mb-3">
               {/* <div className="flex gap-6 mb-4 items-center justify-center">
                 <Link
                   href="https://www.instagram.com/get_akasia"
@@ -52,22 +52,22 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-            <div className="my-8 animate-slide-in-bottom">
+            <div className="animate-slide-in-bottom">
               <div className="gap-8 grid md:grid-cols-3 mx-auto px-6 z-30">
                 <div>
-                  <Image src={screen1} alt="" className="w-90" />
+                  <Image src={screen1} alt="" className="max-h-52 w-auto ms-auto" />
                 </div>
                 <div className="flex flex-col justify-center md:col-span-2 ">
                   <div className="flex flex-row justify-start mb-8">
-                    <div className="h-[60px] mx-1 bg-gray-100 rounded-xl dark:bg-white/[.075] flex items-center justify-center cursor-pointer">
+                    <div className="h-14 mx-1 py-2 px-4 bg-gray-100 rounded-xl dark:bg-white/[.075] flex items-center justify-center cursor-pointer">
                       <Image
                         src={CMA}
                         alt=""
-                        className="w-full py-4 px-6 h-90"
+                        className="max-h-full"
                       />
                     </div>
-                    <div className="h-[60px] mx-1 bg-gray-100 rounded-xl dark:bg-white/[.075] flex items-center justify-center cursor-pointer">
-                      <Image src={SCB} alt="" className="py-4 px-6" />
+                    <div className="h-14 py-2 px-4 mx-1 bg-gray-100 rounded-xl dark:bg-white/[.075] flex items-center justify-center cursor-pointer">
+                      <Image src={SCB} alt="" className="max-h-full" />
                     </div>
                   </div>
                   <div className="flex flex-col mb-6">
