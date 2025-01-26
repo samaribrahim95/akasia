@@ -14,7 +14,7 @@ const Header = () => {
   const t = useTranslations("Home");
 
   return (
-    <div className="relative min-h-svh flex flex-col justify-between pt-16 pb-8">
+    <div className="relative min-h-svh flex flex-col justify-between pb-8">
       <BluredBg />
       <div className="grid flex-1 mb-6">
         <div className="flex items-center justify-center">
