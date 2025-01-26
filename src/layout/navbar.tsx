@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import logoTxt from "../assets/images/akasia-txt-logo.svg";
@@ -9,7 +9,7 @@ import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import MenuBarIcon from "@/components/dynamicIcons/menuBar";
 import CloseIcon from "@/components/dynamicIcons/close";
-import MobileMenu from "./mobileMenu";
+// import MobileMenu from "./mobileMenu";
 
 const Navbar = ({ locale }: { locale: string }) => {
   const t = useTranslations("NavBar");
@@ -37,10 +37,10 @@ const Navbar = ({ locale }: { locale: string }) => {
     router.push(`/${newLocale}/${path}`);
   };
 
-  useEffect(() => {
-    if (openMenu) document.body.style.overflow = "hidden"
-    else document.body.style.overflow = "auto"
-  }, [openMenu])
+  // useEffect(() => {
+  //   if (openMenu) document.body.style.overflow = "hidden"
+  //   else document.body.style.overflow = "auto"
+  // }, [openMenu])
 
   return (
     <div className="overflow-hidden w-full">
@@ -126,7 +126,7 @@ const Navbar = ({ locale }: { locale: string }) => {
           </div>
         </div>
       </nav>
-      <MobileMenu opened={openMenu} />
+      {/* <MobileMenu opened={openMenu} /> */}
 
     </div>
   );
