@@ -1,6 +1,5 @@
 "use client"
 import { useTranslations } from "next-intl"
-import { useEffect } from "react";
 import Tabs from "./tabs";
 
 const CommonQuestions = () => {

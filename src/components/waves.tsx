@@ -20,7 +20,7 @@ const GradientWaveAnimation: React.FC = () => {
   useEffect(() => {
 
     // Wave parameters
-    let phase_0 = 0;
+    const phase_0 = 0;
     const waveHeight_0 = 200; // Height of the wave
     const waveFrequency_0 = 0.015; // Frequency of the waves
     const waveSpeed_0 = 0.02; // Speed of wave animation

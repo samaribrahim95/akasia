@@ -1,6 +1,5 @@
 import CircleTrueIcon from "@/components/dynamicIcons/circleTrue";
 import AwardIcon from "@/components/dynamicIcons/award";
-import FileTrueIcon from "@/components/dynamicIcons/fileTrue";
 import { useTranslations } from "next-intl";
 import BluredBg from "@/components/blueredBg";
 import Link from "next/link";
