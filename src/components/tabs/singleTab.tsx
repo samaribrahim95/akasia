@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import { useState } from "react";
 import MinusIcon from "../dynamicIcons/minus";
 import PlusIcon from "../dynamicIcons/plus";
