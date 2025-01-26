@@ -21,7 +21,9 @@ const Header = () => {
           <div>
             <WaveAnimation />
             <div className="mt-8 text-center">
-              <h1 className="font-bold text-zinc-900 text-center mb-4 dark:text-white">{t("title")}</h1>
+              <h1 className="font-bold text-zinc-900 text-center mb-4 dark:text-white">
+                {t("title")}
+              </h1>
               <p className="text-md font-light max-w-lg mx-auto">
                 {t("description")}
               </p>
@@ -40,19 +42,19 @@ const Header = () => {
             <div className="animate-slide-in-bottom">
               <div className="gap-8 grid md:grid-cols-3 mx-auto px-6 z-30">
                 <div>
-                  <Image src={screen1} alt="" className="max-h-[300px] w-auto mx-auto" />
+                  <Image
+                    src={screen1}
+                    alt=""
+                    className="max-h-[300px] w-auto mx-auto"
+                  />
                 </div>
                 <div className="flex flex-col justify-center md:col-span-2 ">
-                  <div className="flex flex-row justify-start mb-8">
-                    <div className="h-14 mx-1 py-3 px-4 bg-gray-100 rounded-xl dark:bg-white/[.60] flex items-center justify-center cursor-pointer">
-                      <Image
-                        src={CMA}
-                        alt=""
-                        className="px-2 max-w-[175px]"
-                      />
+                  <div className="flex flex-col md:flex-row justify-start mb-8">
+                    <div className="h-14 mx-1 py-3 px-4 bg-gray-100 rounded-xl dark:bg-white/[.60] flex items-center justify-center cursor-pointer mb-4">
+                      <Image src={CMA} alt="" className="px-2 max-w-[200px]" />
                     </div>
                     <div className="h-14 py-2 px-4 mx-1 bg-gray-100 rounded-xl dark:bg-white/[.60] flex items-center justify-center cursor-pointer">
-                      <Image src={SCB} alt="" className="px-2 max-w-[155px]" />
+                      <Image src={SCB} alt="" className="px-2 max-w-[175px]" />
                     </div>
                   </div>
                   <div className="flex flex-col mb-6">

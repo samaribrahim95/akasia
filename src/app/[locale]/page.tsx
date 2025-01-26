@@ -7,7 +7,7 @@ import CommonQuestions from "@/components/commonQuestions";
 
 export default function Home() {
   return (
-    <div className="mt-20">
+    <div className="mt-[100px]">
       <Header />
       <Brief />
       <Solutions />

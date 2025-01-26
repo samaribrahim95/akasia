@@ -11,7 +11,7 @@ import privacyImage from "../../../assets/images/privacy.jpg";
 const Privacy = () => {
   const t = useTranslations();
   return (
-    <div className="mt-20 relative min-h-svh flex flex-col justify-between">
+    <div className="mt-[100px] relative min-h-svh flex flex-col justify-between">
       <BreadCrumb
         data={[
           {
@@ -33,34 +33,23 @@ const Privacy = () => {
       />
       <BluredBg />
       <section className="py-16 gap-8 md:gap-12 animate-slide-in-top">
-        <h2 className="mb-2">{t("Privacy.Overview")}</h2>
-        <p className="mb-4">{t("Privacy.OverviewDes")}</p>
-        <h2 className="mb-2">{t("Privacy.Introduction")}</h2>
-        <p className="mb-4">{t("Privacy.IntroductionDes")}</p>
-        <h2 className="mb-2">
-          {t("Privacy.InformationCollection")}
-        </h2>
-        <p className="mb-4">{t("Privacy.InformationCollectionDes")}</p>
-        <p className="mb-4">{t("Privacy.InformationCollectionDes2")}</p>
-        <h2 className="mb-2">
-          {t("Privacy.InformationRegardingChildren")}
-        </h2>
-        <p className="mb-4">{t("Privacy.InformationRegardingChildrenDes")}</p>
-        <h2 className="mb-2">{t("Privacy.OtherWays")}</h2>
-        <p className="mb-4">{t("Privacy.OtherWaysDes")}</p>
-        <h2 className="mb-2">
-          {t("Privacy.UseInformation")}{" "}
-        </h2>
-        <p className="mb-4">{t("Privacy.UseInformationDes")}</p>
-        <h2 className="mb-2">
-          {t("Privacy.ChangesPrivacyPolicy")}
-        </h2>
-        <p className="mb-4">{t("Privacy.ChangesPrivacyPolicyDes")}</p>
-        <h2 className="mb-2">
-          {" "}
-          {t("Privacy.ContactInformation")}{" "}
-        </h2>
-        <p className="mb-4">
+        <h2 className="mb-3">{t("Privacy.Overview")}</h2>
+        <p className="mb-6">{t("Privacy.OverviewDes")}</p>
+        <h2 className="mb-3">{t("Privacy.Introduction")}</h2>
+        <p className="mb-6">{t("Privacy.IntroductionDes")}</p>
+        <h2 className="mb-3">{t("Privacy.InformationCollection")}</h2>
+        <p className="mb-6">{t("Privacy.InformationCollectionDes")}</p>
+        <p className="mb-6">{t("Privacy.InformationCollectionDes2")}</p>
+        <h2 className="mb-3">{t("Privacy.InformationRegardingChildren")}</h2>
+        <p className="mb-6">{t("Privacy.InformationRegardingChildrenDes")}</p>
+        <h2 className="mb-3">{t("Privacy.OtherWays")}</h2>
+        <p className="mb-6">{t("Privacy.OtherWaysDes")}</p>
+        <h2 className="mb-3">{t("Privacy.UseInformation")} </h2>
+        <p className="mb-6">{t("Privacy.UseInformationDes")}</p>
+        <h2 className="mb-3">{t("Privacy.ChangesPrivacyPolicy")}</h2>
+        <p className="mb-6">{t("Privacy.ChangesPrivacyPolicyDes")}</p>
+        <h2 className="mb-3"> {t("Privacy.ContactInformation")} </h2>
+        <p className="mb-6">
           {t("Privacy.ContactInformationDes")}
           <Link
             href="mailto:info@getakasia.com"

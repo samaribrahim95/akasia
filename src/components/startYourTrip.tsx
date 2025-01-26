@@ -11,8 +11,8 @@ const StartYourTrip = () => {
     <div className="flex gap-7 justify-between items-center sm:my-16 my-6 sm:px-8 px-6 sm:py-12 py-4 lg:flex-row flex-col bg-black dark:bg-slate-200 rounded-[20px] box-shadow relative">
       <svg
         className="absolute top-0 right-0"
-        width="400"
-        height="250"
+        width="350"
+        height="200"
         aria-hidden="true"
       >
         <defs>
@@ -81,22 +81,22 @@ const StartYourTrip = () => {
           {t("startYourTripDes")}
         </p>
       </div>
-        <div className="z-20 flex flex-row lg:flex-col">
-          <Link href="#" className="mb-3">
-            <Image
-              className="mx-1 w-[140px] sm:w-[180px]"
-              src={appIcon1}
-              alt=""
-            />
-          </Link>
-          <Link href="#">
-            <Image
-              className="mx-1 w-[140px] sm:w-[180px]"
-              src={appIcon2}
-              alt=""
-            />
-          </Link>
-          </div>
+      <div className="z-20 flex flex-row lg:flex-col">
+        <Link href="#" className="mb-3">
+          <Image
+            className="mx-1 w-[140px] sm:w-[180px]"
+            src={appIcon1}
+            alt=""
+          />
+        </Link>
+        <Link href="#">
+          <Image
+            className="mx-1 w-[140px] sm:w-[180px]"
+            src={appIcon2}
+            alt=""
+          />
+        </Link>
+      </div>
     </div>
   );
 };

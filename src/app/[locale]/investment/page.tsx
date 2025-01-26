@@ -18,7 +18,6 @@ import BreadCrumb from "@/components/breadcrumb";
 
 import screen2 from "../../../assets/images/screen-2-left.png";
 
-
 const Investment = () => {
   const t = useTranslations();
 
@@ -41,7 +40,7 @@ const Investment = () => {
   ];
 
   return (
-    <div className="mt-20">
+    <div className="mt-[100px]">
       <BreadCrumb
         data={[
           {
@@ -61,33 +60,37 @@ const Investment = () => {
         alt="Investment"
       />
       <section className="py-16 grid gap-8 md:gap-12 animate-slide-in-top">
-        <div className="justify-items-between gap-8 grid md:grid-cols-3 mx-auto px-6 z-30">
-                <div>
-                  <Image src={screen2} alt="" className="max-h-[300px] w-auto mx-auto" />
-                </div>
-                <div className="md:col-span-2 flex flex-col justify-center">
-                        <h2 className=" !leading-[60px] dark:text-gray-200 mb-6 text-gray-800 text-center">
-            {t("Investment.downloadSlogn")}
-          </h2>
-          <div className="flex flex-col md:flex-row justify-center pb-8">
-          <Link href="#">
+        <div className="justify-items-between gap-8 grid md:grid-cols-3 mx-auto px-6 z-30 max-w-[850px]">
+          <div>
             <Image
-              className="mx-1 w-[130px] sm:w-[170px]"
-              src={appIcon1}
+              src={screen2}
               alt=""
+              className="max-h-[350px] w-auto mx-auto"
             />
-          </Link>
-          <Link href="#">
-            <Image
-              className="mx-1 w-[140px] sm:w-[180px]"
-              src={appIcon2}
-              alt=""
-            />
-          </Link>
           </div>
-        </div>  
-                </div>
-                <BluredBg />
+          <div className="md:col-span-2 flex flex-col justify-center">
+            <h2 className=" !leading-[60px] dark:text-gray-200 mb-6 text-gray-800 text-center">
+              {t("Investment.downloadSlogn")}
+            </h2>
+            <div className="flex flex-col md:flex-row justify-center pb-8">
+              <Link href="#">
+                <Image
+                  className="mx-1 w-[130px] sm:w-[170px]"
+                  src={appIcon1}
+                  alt=""
+                />
+              </Link>
+              <Link href="#">
+                <Image
+                  className="mx-1 w-[140px] sm:w-[180px]"
+                  src={appIcon2}
+                  alt=""
+                />
+              </Link>
+            </div>
+          </div>
+        </div>
+        <BluredBg />
       </section>
 
       <section className="py-16 animate-slide-in-bottom">

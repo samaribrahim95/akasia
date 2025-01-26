@@ -88,7 +88,7 @@ const About = () => {
   ];
 
   return (
-    <div className="mt-20">
+    <div className="mt-[100px]">
       <BreadCrumb
         data={[
           {
@@ -136,9 +136,7 @@ const About = () => {
         <div className="flex flex-col lg:flex-row lg:items-center">
           <div className="w-full lg:w-1/2 flex-1">
             <div className="lg:max-w-lg mb-16 lg:mb-0">
-              <h2>
-                {t("About.innovativeInvestmentPaths")}
-              </h2>
+              <h2>{t("About.innovativeInvestmentPaths")}</h2>
               <div className="space-y-5">
                 <div className="w-full lg:mt-8 bg-transparent border rounded-xl lg:max-w-sm border-gray-200 dark:border-gray-500"></div>
                 <p className="flex items-start justify-start me-10">

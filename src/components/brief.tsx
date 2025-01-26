@@ -16,7 +16,7 @@ const Brief = () => {
           <p>{t("akasiaDescription3")}</p>
         </div>
         </div>
-     <div>
+     <div className="flex flex-col justify-center">
           <Image
             src={HomeImage}
             alt={t("akasiaCapital")}

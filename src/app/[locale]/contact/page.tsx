@@ -10,15 +10,19 @@ import BluredBg from "@/components/blueredBg";
 const Contact = () => {
   const t = useTranslations();
   return (
-    <div className="mt-20">
-      <BreadCrumb data={[{
-        link: '/',
-        text: t("Home.siteName")
-      },
-      {
-        link: '#',
-        text: t("Contact.title")
-      }]} />
+    <div className="mt-[100px]">
+      <BreadCrumb
+        data={[
+          {
+            link: "/",
+            text: t("Home.siteName"),
+          },
+          {
+            link: "#",
+            text: t("Contact.title"),
+          },
+        ]}
+      />
       <h1> {t("Contact.title")}</h1>
       <Image
         src={contactImage}
