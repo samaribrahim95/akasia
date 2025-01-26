@@ -1,24 +1,15 @@
 "use client"
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 
 const GradientWaveAnimation: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const [canvas, setCanvasState] = useState<HTMLCanvasElement>();
-  const [ctx, setCtxState] = useState<CanvasRenderingContext2D>();
 
   useEffect(() => {
-    const _canvas = canvasRef.current;
-    if (!_canvas) return;
-    else setCanvasState(_canvas)
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-    const _ctx = _canvas.getContext("2d");
-    if (!_ctx) return;
-    else setCtxState(_ctx)
-
-  }, []);
-
-  useEffect(() => {
-
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
     // Wave parameters
     const phase_0 = 0;
     const waveHeight_0 = 200; // Height of the wave
@@ -26,12 +17,12 @@ const GradientWaveAnimation: React.FC = () => {
     const waveSpeed_0 = 0.02; // Speed of wave animation
 
     const createGradientBackground = () => {
-      const gradient = ctx?.createLinearGradient(10, 10, 0, canvas?.height!);
-      gradient?.addColorStop(0, "#212121"); // Light gray
-      gradient?.addColorStop(0.2, "#464647"); // Medium gray
-      gradient?.addColorStop(0.4, "#7c7d7e"); // Medium gray
-      gradient?.addColorStop(0.6, "#fafafa"); // Black
-      gradient?.addColorStop(1, "transparent"); // Black
+      const gradient = ctx.createLinearGradient(10, 10, 0, canvas.height);
+      gradient.addColorStop(0, "#212121"); // Light gray
+      gradient.addColorStop(0.2, "#464647"); // Medium gray
+      gradient.addColorStop(0.4, "#7c7d7e"); // Medium gray
+      gradient.addColorStop(0.6, "#fafafa"); // Black
+      gradient.addColorStop(1, "transparent"); // Black
       return gradient;
     };
 
@@ -68,7 +59,7 @@ const GradientWaveAnimation: React.FC = () => {
     if (ctx && canvas) {
       animate(waveSpeed_0, waveHeight_0, waveFrequency_0, phase_0);
     }
-  }, [ctx, canvas])
+  }, [])
 
 
   return <canvas ref={canvasRef} id="gradient-canvas"
