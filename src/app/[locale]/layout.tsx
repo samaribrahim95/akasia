@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import Footer from "@/layout/footer";
 import Navbar from "@/layout/navbar";
 import "../../assets/css/index.css";
@@ -7,17 +7,29 @@ import { LocalesType, routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import StartYourTrip from "@/components/startYourTrip";
 
+type Props = {
+  children: React.ReactNode;
+  params: { locale: string };
+};
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params: { locale }
+}: Omit<Props, 'children'>) {
+  const t = await getTranslations({ locale, namespace: 'Home' });
+
+  return {
+    title: t('siteName')
+  };
 }
 
 export default async function RootLayout({
   children,
   params,
-}: Readonly<{
-  children: React.ReactNode;
-  params: { locale: string };
-}>) {
+}: Readonly<Props>) {
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
@@ -26,6 +38,7 @@ export default async function RootLayout({
   }
   // Enable static rendering
   setRequestLocale(locale);
+
 
   // Providing all messages to the client
   // side is the easiest way to get started
