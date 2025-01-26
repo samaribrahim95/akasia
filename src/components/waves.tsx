@@ -24,6 +24,17 @@ const GradientWaveAnimation: React.FC = () => {
     const waveHeight_0 = 200; // Height of the wave
     const waveFrequency_0 = 0.015; // Frequency of the waves
     const waveSpeed_0 = 0.02; // Speed of wave animation
+
+    const createGradientBackground = () => {
+      const gradient = ctx?.createLinearGradient(10, 10, 0, canvas?.height!);
+      gradient?.addColorStop(0, "#212121"); // Light gray
+      gradient?.addColorStop(0.2, "#464647"); // Medium gray
+      gradient?.addColorStop(0.4, "#7c7d7e"); // Medium gray
+      gradient?.addColorStop(0.6, "#fafafa"); // Black
+      gradient?.addColorStop(1, "transparent"); // Black
+      return gradient;
+    };
+
     // Draw the wave with background
     const drawWave = (waveHeight: number, waveFrequency: number, phase: number) => {
       if (ctx && canvas) {
@@ -59,18 +70,6 @@ const GradientWaveAnimation: React.FC = () => {
     }
   }, [ctx, canvas])
 
-
-
-
-  const createGradientBackground = () => {
-    const gradient = ctx?.createLinearGradient(10, 10, 0, canvas?.height!);
-    gradient?.addColorStop(0, "#212121"); // Light gray
-    gradient?.addColorStop(0.2, "#464647"); // Medium gray
-    gradient?.addColorStop(0.4, "#7c7d7e"); // Medium gray
-    gradient?.addColorStop(0.6, "#fafafa"); // Black
-    gradient?.addColorStop(1, "transparent"); // Black
-    return gradient;
-  };
 
   return <canvas ref={canvasRef} id="gradient-canvas"
     data-js-darken-top="true"
