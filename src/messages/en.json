@@ -22,7 +22,22 @@
     "downloadApp": "Download App",
     "content": "Akasia” Company Tatwir AliIiddikhar For Financial Technology in Securities Business, a registered closed joint-stock company in the Kingdom of Saudi Arabia, regulated by the Capital Market Authority (CMA), offers financial technology services in wealth management and asset management as an automated advisor under the Financial Technology Laboratory. Akasia does not provide any business or investment advice beyond its in-app recommendations and therefore is not liable for any loss resulting from reliance on general information, whether provided or available on its website and other web-based services. Akasia does not claim the accuracy, reliability, completeness, or uninterrupted provision of its information. Any third-party information provided through Akasia does not reflect the company's opinions at any time. The content of the Website Services provided by Akasia aims to provide you with general information only and is not an offer to sell or a solicitation of an offer to buy any securities, and therefore should not be relied upon for investment purposes. Additionally, any comments, articles, daily news, public and/or private chat posts, stock analysis, or other information contained in the Website Services should not be considered as investment advice.“Akasia Company Tatwir AliIiddikhar For Financial Technology in Securities Business will not be responsible for any delay, inaccuracy, error, or omission in any information provided by the company and/or information provider. The company will also not be liable for any loss or damage resulting from the use of the information provided by the company and/or any information provider. Furthermore, the company assumes no responsibility for any losses resulting from unauthorized access to the information or any other misuse. Similarly, any opinions, news, research, analyses, prices, or other information contained in our Website Services or sent to you via email are considered general market commentary and not investment advice. Therefore, the company will not be liable for any loss or damage, including but not limited to direct or indirect loss of profit, arising directly or indirectly from the use or reliance on this information. Every decision you make regarding whether an investment is suitable or appropriate is an independent decision of yours. You agree that Akasia has no fiduciary duty to you and is not responsible for any obligations, claims, damages, costs, or expenses, including legal fees, resulting from your reliance on the company's general investment information. Akasia does not make any representations as to whether a specific investment is suitable or appropriate for you outside the scope of its in-app recommendations and during the registration process.",
     "readMore": "Read More",
-    "readLess": "Read Less"
+    "readLess": "Read Less",
+    "commonQuestions": {
+      "title": "Common Questions",
+      "questions": {
+        "question_1": "Is the akasia app authorized by the Saudi Central Bank or the Capital Market Authority?",
+        "answer_1": "Yes, the akasia app is licensed by the Saudi Central Bank within the regulatory sandbox, and it is also licensed by the Capital Market Authority as part of the financial technology lab.",
+        "question_2": "How does akasia use open banking services?",
+        "answer_2": "akasia utilizes open banking services through secure application programming interfaces (APIs) to access financial data from users' bank accounts. With their consent, akasia can retrieve transaction histories, account balances, and other relevant information, allowing users to have a comprehensive view of their financial status within the app.",
+        "question_3": "Can I link more than one bank account?",
+        "answer_3": "Yes, you can link multiple bank accounts to the app. This feature provides you with a unified view of your funds and tracks transactions from different banks in one place.",
+        "question_4": "Is my data safe?",
+        "answer_4": "Yes! At akasia, we prioritize data privacy, hence we only request the data necessary for the app to function without collecting any additional or optional information.",
+        "question_5": "Is the app directly linked to my bank?",
+        "answer_5": "We always strive to establish direct links with all banks, and we typically announce any new agreements on our social media accounts."
+      }
+    }
   },
   "About": {
     "title": "About Akasia Capital",

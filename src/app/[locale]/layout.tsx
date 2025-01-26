@@ -17,8 +17,9 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({
-  params: { locale }
+  params
 }: Omit<Props, 'children'>) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Home' });
 
   return {
@@ -30,7 +31,6 @@ export default async function RootLayout({
   children,
   params: { locale },
 }: Readonly<Props>) {
-  // const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as LocalesType)) {
