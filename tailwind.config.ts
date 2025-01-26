@@ -12,12 +12,12 @@ export default {
       },
       container: {
         center: true,
-        padding: '4rem',
+        padding: '1rem',
         screens: {
           m: '600px',
           md: '728px',
           lg: '984px',
-          xl: '1080px'
+          xl: '1000px'
         }
       }
     },

@@ -104,14 +104,14 @@ const About = () => {
       <h1> {t("About.title")}</h1>
       <Image
         src={aboutImg}
-        className="w-full object-cover rounded-xl mt-5"
+        className="w-full object-cover rounded-xl mt-5 animate-fade-in"
         alt="About Akasia"
       />
       <BluredBg />
-      <section className="py-16 grid lg:grid-cols-2 gap-8 lg:gap-12">
+      <section className="py-16 grid lg:grid-cols-2 gap-8 lg:gap-12 animate-slide-in-top">
         <div className="lg:col-span-2">
           <div>
-            <h2 className="uppercase font-bold text-2xl md:text-3xl">
+            <h2 className="uppercase dark:text-gray-200">
               {t("About.newVision")}
             </h2>
             <p className="md:max-w-[800px]">{t("About.newVisionDes")}</p>
@@ -123,7 +123,7 @@ const About = () => {
               <div className="flex gap-x-5" key={index}>
                 <point.icon />
                 <div className="grow">
-                  <h3 className="text-lg font-semibold">{point.title}</h3>
+                  <h3>{point.title}</h3>
                   <p className="mt-1">{point.description}</p>
                 </div>
               </div>
@@ -136,7 +136,7 @@ const About = () => {
         <div className="flex flex-col lg:flex-row lg:items-center">
           <div className="w-full lg:w-1/2 flex-1">
             <div className="lg:max-w-lg mb-16 lg:mb-0">
-              <h2 className="text-3xl lg:text-4xl">
+              <h2>
                 {t("About.innovativeInvestmentPaths")}
               </h2>
               <div className="space-y-5">
@@ -161,7 +161,7 @@ const About = () => {
               <div className="gap-x-3 flex items-start" key={index}>
                 <item.icon />
                 <div className="grow">
-                  <span className="text-sm text-gray">{item.feature}</span>
+                  <span className="text-gray">{item.feature}</span>
                 </div>
               </div>
             ))}

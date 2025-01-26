@@ -6,7 +6,7 @@ type Props = {
 
 const Tabs = (props: Props) => {
   return (
-    <div className="py-16">
+    <div className="mt-8">
       {
         props.data.map((item, index) => <SingleTab data={item} key={index} />)
       }

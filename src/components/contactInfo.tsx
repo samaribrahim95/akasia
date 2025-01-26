@@ -6,8 +6,8 @@ const ContactInfo = () => {
   const t = useTranslations("Contact");
 
   return (
-    <section className="sm:w-[580px] lg:w-full mx-auto py-16">
-      <div className="gap-8 grid lg:grid-cols-2 mx-auto px-6 z-30">
+    <section className="sm:w-[580px] lg:w-full mx-auto py-16 gap-8 md:gap-12 animate-slide-in-top">
+      <div className="gap-8 grid lg:grid-cols-2 mx-auto z-30">
         <div>
           <p className="font-medium ">{t("title")}</p>
           <h1 className="mt-2 text-2xl font-semibold  md:text-3xl text-gray-950 dark:text-white">

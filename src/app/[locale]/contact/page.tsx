@@ -22,7 +22,7 @@ const Contact = () => {
       <h1> {t("Contact.title")}</h1>
       <Image
         src={contactImage}
-        className="w-full object-cover rounded-xl mt-5"
+        className="w-full object-cover rounded-xl mt-5 animate-fade-in"
         alt="Contact Akasia"
       />
       <BluredBg />

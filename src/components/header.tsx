@@ -8,43 +8,29 @@ import Image from "next/image";
 
 import CMA from "../assets/images/cma.svg";
 import SCB from "../assets/images/scb.svg";
-import screen1 from "../assets/images/screen-1-left.png";
+import screen1 from "../assets/images/screen-1.png";
 
 const Header = () => {
   const t = useTranslations("Home");
 
   return (
-    <div className="relative min-h-svh flex flex-col justify-between pb-8">
+    <div className="relative min-h-svh flex flex-col justify-between pt-16 pb-8">
       <BluredBg />
       <div className="grid flex-1 mb-6">
         <div className="flex items-center justify-center">
           <div>
             <WaveAnimation />
             <div className="mt-8 text-center">
-              <h1 className="font-bold text-2xl	mb-4">{t("title")}</h1>
+              <h1 className="font-bold text-zinc-900 text-center mb-4 dark:text-white">{t("title")}</h1>
               <p className="text-md font-light max-w-lg mx-auto">
                 {t("description")}
               </p>
             </div>
-            <div className="mt-8 mb-3">
-              {/* <div className="flex gap-6 mb-4 items-center justify-center">
-                <Link
-                  href="https://www.instagram.com/get_akasia"
-                  className="px-4 py-2.5 "
-                >
-                  <InstagramIcon />
-                </Link>
-                <Link
-                  href="https://twitter.com/get_akasia"
-                  className="px-4 py-2.5"
-                >
-                  <XIcon />
-                </Link>
-              </div> */}
+            <div className="mt-5 mb-8">
               <div className="text-center">
                 <Link
                   href="/about"
-                  className="text-sm font-noto font-semibold leading-6 hover:mr-2"
+                  className="text-sm font-noto font-semibold leading-6 hover:ms-2"
                 >
                   {t("learnMore")}
                   <span className="inline-block ltr:rotate-180 mx-2">←</span>
@@ -54,37 +40,37 @@ const Header = () => {
             <div className="animate-slide-in-bottom">
               <div className="gap-8 grid md:grid-cols-3 mx-auto px-6 z-30">
                 <div>
-                  <Image src={screen1} alt="" className="max-h-52 w-auto ms-auto" />
+                  <Image src={screen1} alt="" className="max-h-[300px] w-auto mx-auto" />
                 </div>
                 <div className="flex flex-col justify-center md:col-span-2 ">
                   <div className="flex flex-row justify-start mb-8">
-                    <div className="h-14 mx-1 py-2 px-4 bg-gray-100 rounded-xl dark:bg-white/[.075] flex items-center justify-center cursor-pointer">
+                    <div className="h-14 mx-1 py-3 px-4 bg-gray-100 rounded-xl dark:bg-white/[.60] flex items-center justify-center cursor-pointer">
                       <Image
                         src={CMA}
                         alt=""
-                        className="max-h-full"
+                        className="px-2 max-w-[175px]"
                       />
                     </div>
-                    <div className="h-14 py-2 px-4 mx-1 bg-gray-100 rounded-xl dark:bg-white/[.075] flex items-center justify-center cursor-pointer">
-                      <Image src={SCB} alt="" className="max-h-full" />
+                    <div className="h-14 py-2 px-4 mx-1 bg-gray-100 rounded-xl dark:bg-white/[.60] flex items-center justify-center cursor-pointer">
+                      <Image src={SCB} alt="" className="px-2 max-w-[155px]" />
                     </div>
                   </div>
                   <div className="flex flex-col mb-6">
                     <p className="flex items-center mb-3">
                       <CircleTrueIcon />
-                      <span className="text-sm mx-2 font-medium text-gray-800 dark:text-gray-200">
+                      <span className="mx-2 font-medium text-gray-800 dark:text-gray-200">
                         {t("compliantIslamic")}
                       </span>
                     </p>
                     <p className="flex items-center mb-3">
                       <AwardIcon />
-                      <span className="text-sm mx-2 font-medium text-gray-800 dark:text-gray-200">
+                      <span className="mx-2 font-medium text-gray-800 dark:text-gray-200">
                         {t("transparency")}
                       </span>
                     </p>
                   </div>
                   <div className="text-center md:text-start">
-                    <button className="bg-gradient-to-bl from-slate-500 to-indigo-300 hover:bg-blue-200 text-white py-3 px-4 inline-flex items-center rounded-full">
+                    <button className="bg-gradient-to-bl from-slate-500 to-indigo-300 hover:bg-blue-200 text-white py-2 px-4 inline-flex items-center rounded-full">
                       <svg
                         className="fill-current w-4 h-4 mx-1"
                         xmlns="http://www.w3.org/2000/svg"

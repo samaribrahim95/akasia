@@ -8,11 +8,16 @@ import Link from "next/link";
 import investmentImage from "../../../assets/images/invesment.jpg";
 import invesmentImage2 from "../../../assets/images/invesment-2.jpg";
 import BluredBg from "@/components/blueredBg";
-import downloadApp from "../../../assets/images/appIcons.png";
+import appIcon1 from "../../../assets/images/app-store-icon.png";
+import appIcon2 from "../../../assets/images/play-store-icon-v.png";
+
 import DownloadIcon from "@/components/dynamicIcons/download";
 import TimerIcon from "@/components/dynamicIcons/timer";
 import StarsIcon from "@/components/dynamicIcons/starts";
 import BreadCrumb from "@/components/breadcrumb";
+
+import screen2 from "../../../assets/images/screen-2-left.png";
+
 
 const Investment = () => {
   const t = useTranslations();
@@ -55,20 +60,34 @@ const Investment = () => {
         className="w-full object-cover rounded-xl mt-5 animate-fade-in"
         alt="Investment"
       />
-      <BluredBg />
       <section className="py-16 grid gap-8 md:gap-12 animate-slide-in-top">
-        <div className="justify-items-center">
-          <h3 className="text-xl text-gray-800 font-bold sm:text-3xl dark:text-gray-200 mb-6">
+        <div className="justify-items-between gap-8 grid md:grid-cols-3 mx-auto px-6 z-30">
+                <div>
+                  <Image src={screen2} alt="" className="max-h-[300px] w-auto mx-auto" />
+                </div>
+                <div className="md:col-span-2 flex flex-col justify-center">
+                        <h2 className=" !leading-[60px] dark:text-gray-200 mb-6 text-gray-800 text-center">
             {t("Investment.downloadSlogn")}
-          </h3>
+          </h2>
+          <div className="flex flex-col md:flex-row justify-center pb-8">
           <Link href="#">
             <Image
-              className="mx-auto px-4 w-[140px] sm:w-[180px]"
-              src={downloadApp}
+              className="mx-1 w-[130px] sm:w-[170px]"
+              src={appIcon1}
               alt=""
             />
           </Link>
-        </div>
+          <Link href="#">
+            <Image
+              className="mx-1 w-[140px] sm:w-[180px]"
+              src={appIcon2}
+              alt=""
+            />
+          </Link>
+          </div>
+        </div>  
+                </div>
+                <BluredBg />
       </section>
 
       <section className="py-16 animate-slide-in-bottom">
@@ -76,7 +95,7 @@ const Investment = () => {
           <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-6 lg:order-2">
             <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-6 lg:order-2">
               <div className="bg-gray-100 w-full h-5/6 rounded-xl sm:h-3/4 lg:h-full dark:bg-white/[.075] py-[30px] ps-[50px] pe-4">
-                <h2 className="text-2xl text-gray-800 font-bold sm:text-3xl dark:text-gray-200">
+                <h2 className="font-bold dark:text-gray-200">
                   {t("Investment.title")}
                 </h2>
                 <nav className="grid gap-4 mt-5 md:mt-10">
