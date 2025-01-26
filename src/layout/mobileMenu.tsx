@@ -45,7 +45,7 @@ const MobileMenu = ({ opened }: { opened: boolean }) => {
             </ul>
           </div>
           <div className="w-full flex flex-row items-center justify-between dark:border-t-slate-500/50 border-t-gray-300/50 border-t pt-6 pb-6">
-            <a>
+            <Link href="#">
               <button aria-label="Toggle dark mode" className="">
                 <div className="flex flex-row gap-2 justify-start items-center">
                   <span className="dark:block hidden text-gray-900 dark:text-gray-50 font-bold">Light Colors</span>
