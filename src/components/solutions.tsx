@@ -19,7 +19,7 @@ const Solutions = () => {
       <div className="relative ">
         <div className="absolute top-0 right-0  w-[480px] h-[480px] pointer-events-none bg-gradient-to-b from-slate-500/25 via-slate-500/5 via-25% to-slate-500/0 to-75% rounded-full"></div>
         <div>
-          <h2 className="uppercase text-3xl text-gray-900 font-bold dark:text-white !leading-[60px]">
+          <h2 className="uppercase dark:text-white !leading-[60px] mb-8">
             {t("provideSolutions")}
           </h2>
         </div>
@@ -34,7 +34,7 @@ const Solutions = () => {
                   <BookIcon />
                 </span>
                 <div className="ms-2 sm:ms-2">
-                  <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+                  <h3 className="text-base text-gray-800 dark:text-gray-200">
                     {item}
                   </h3>
                 </div>

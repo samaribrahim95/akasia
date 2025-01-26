@@ -1,11 +1,16 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import Footer from "@/layout/footer";
 import Navbar from "@/layout/navbar";
 import "../../assets/css/index.css";
 import { LocalesType, routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import StartYourTrip from "@/components/startYourTrip";
+import TrimParagraph from "@/components/trimParagraph";
 
 type Props = {
   children: React.ReactNode;
@@ -16,14 +21,12 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({
-  params
-}: Omit<Props, 'children'>) {
+export async function generateMetadata({ params }: Omit<Props, "children">) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'Home' });
+  const t = await getTranslations({ locale, namespace: "Home" });
 
   return {
-    title: t('siteName')
+    title: t("siteName"),
   };
 }
 
@@ -31,14 +34,12 @@ export default async function RootLayout({
   children,
   params: { locale },
 }: Readonly<Props>) {
-
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as LocalesType)) {
     notFound();
   }
   // Enable static rendering
   setRequestLocale(locale);
-
 
   // Providing all messages to the client
   // side is the easiest way to get started
@@ -52,6 +53,7 @@ export default async function RootLayout({
             <div className="container">
               {children}
               <StartYourTrip />
+              <TrimParagraph />
             </div>
             <Footer locale={locale} />
           </div>
