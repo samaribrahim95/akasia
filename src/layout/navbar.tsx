@@ -34,7 +34,7 @@ const Navbar = ({ locale }: { locale: string }) => {
   };
 
   return (
-    <nav className="fixed w-full z-50 top-0 start-0 bg-white/30 backdrop-blur-md border-b-blue-900/5 dark:border-b-gray-100/5 border-b shadow-lg">
+    <nav className="fixed w-full z-50 top-0 backdrop-blur-md border-b-blue-900/5 dark:border-b-gray-100/5 border-b shadow-lg">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div id="nav-logo">
           <div className="hidden dark:flex">
@@ -92,7 +92,7 @@ const Navbar = ({ locale }: { locale: string }) => {
                 <Link
                   href={items.to}
                   className="font-medium text-black dark:text-slate-100"
-                  //   aria-current="page"
+                //   aria-current="page"
                 >
                   {items.title}
                 </Link>
