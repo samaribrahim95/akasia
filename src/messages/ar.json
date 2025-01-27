@@ -5,7 +5,11 @@
     "howInvest": "كيف تستثمر",
     "blog": "المدونة",
     "contact": "التواصل",
-    "downloadApp": "حمل التطبيق"
+    "downloadApp": "حمل التطبيق",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "lightMode": "ألوان فاتحة",
+    "darkMode": "أالوان داكنة"
   },
   "Home": {
     "siteName": "أكاسيا",

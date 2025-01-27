@@ -5,7 +5,11 @@
     "howInvest": "How to Invest",
     "blog": "Blog",
     "contact": "Contact",
-    "downloadApp": "Download App"
+    "downloadApp": "Download App",
+    "phone": "Phone",
+    "email": "E-mail",
+    "lightMode": "Light Colors",
+    "darkMode": "Dark Color"
   },
   "Home": {
     "siteName": "Akasia",

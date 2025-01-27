@@ -1,20 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import logoTxt from "../assets/images/akasia-txt-logo.svg";
 import logoTxtLight from "../assets/images/akasia-txt-logo-light.svg";
 import { useTranslations } from "next-intl";
-import { usePathname, useRouter } from "next/navigation";
 import MenuBarIcon from "@/components/dynamicIcons/menuBar";
 import CloseIcon from "@/components/dynamicIcons/close";
-// import MobileMenu from "./mobileMenu";
+import MobileMenu from "./mobileMenu";
+import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = ({ locale }: { locale: string }) => {
   const t = useTranslations("NavBar");
   const pathname = usePathname();
   const router = useRouter();
+
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   const menuItem = [
@@ -32,15 +33,16 @@ const Navbar = ({ locale }: { locale: string }) => {
     },
   ];
 
+  useEffect(() => {
+    if (openMenu) document.body.style.overflow = "hidden"
+    else document.body.style.overflow = "auto"
+  }, [openMenu])
+
+
   const toggleLang = (newLocale: string) => {
     const path = pathname.split("/").slice(2).join("/");
     router.push(`/${newLocale}/${path}`);
   };
-
-  // useEffect(() => {
-  //   if (openMenu) document.body.style.overflow = "hidden"
-  //   else document.body.style.overflow = "auto"
-  // }, [openMenu])
 
   return (
     <div className="overflow-hidden w-full">
@@ -73,12 +75,6 @@ const Navbar = ({ locale }: { locale: string }) => {
           </div>
           <div className="md:hidden flex items-end gap-4">
             <button
-              onClick={() => toggleLang(locale == "ar" ? "en" : "ar")}
-              className="font-medium text-black dark:text-slate-100"
-            >
-              {locale == "ar" ? "EN" : "ع"}
-            </button>
-            <button
               data-collapse-toggle="navbar-default"
               type="button"
               className="w-10 h-5 text-gray-500 focus:outline-none dark:text-gray-400 text-center"
@@ -102,7 +98,6 @@ const Navbar = ({ locale }: { locale: string }) => {
                   <Link
                     href={items.to}
                     className="font-medium text-black dark:text-slate-100"
-                  //   aria-current="page"
                   >
                     {items.title}
                   </Link>
@@ -126,7 +121,7 @@ const Navbar = ({ locale }: { locale: string }) => {
           </div>
         </div>
       </nav>
-      {/* <MobileMenu opened={openMenu} /> */}
+      <MobileMenu opened={openMenu} menuItem={menuItem} locale={locale} toggleLang={toggleLang} />
 
     </div>
   );

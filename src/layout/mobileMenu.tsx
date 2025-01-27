@@ -1,76 +1,86 @@
+import Image from "next/image"
 import Link from "next/link"
+import sunIcon from "../assets/images/icons/sun.svg";
+import moonIcon from "../assets/images/icons/moon.svg";
+import { toggleTheme } from "@/hepler";
+import { useTranslations } from "next-intl";
 
-const MobileMenu = ({ opened }: { opened: boolean }) => {
+type Props = {
+  menuItem: {
+    title: string,
+    to: string
+  }[],
+  opened: boolean,
+  locale: string,
+  toggleLang: (locale: string) => void
+}
+
+const MobileMenu = (p: Props) => {
+  const t = useTranslations();
   return (
-    <div className={`absolute ${opened ? 'left-0' : 'left-full'} top-0 w-full h-[100dvh] flex flex-col items-center p-3 transition-all duration-500 ease-in-out backdrop-blur-xl bg-black z-[49]`}>
-      <div className="pt-16 flex h-[100dvh] flex-col items-start justify-between w-full max-w-[1000px] z-[999]">
-        <div>
+    <div className={`fixed ${p.opened ? 'left-0' : 'left-full'} top-0 w-full h-svh flex flex-col items-center justify-between p-3 pt-16 transition-all duration-500 ease-in-out backdrop-blur-lg dark:bg-black/40 bg-white/40 z-[49]`}>
+
+      <ul className="w-full">
+        {
+          p.menuItem.map((item, index) =>
+            <li className="px-2 py-3 mb-3" key={index}>
+              <Link href={item.to}>
+                {item.title}
+              </Link>
+            </li>)
+        }
+      </ul>
+
+      <div className="w-full flex flex-col gap-6">
+        <div className="mt-3">
+          {t("NavBar.contact")}
           <ul>
-            <li id="f-about" className="mt-3 flex flex-col justify-center gap-2 items-start sm:justify-start sm:items-start">
-              <Link href="/about/">
-                <h4 className="text-gray-900 dark:text-gray-50">About Akasia Capital</h4>
+            <li>
+              <Link href="tel:+966114792233">
+                <span>{t("NavBar.phone")}: +966114442233</span>
               </Link>
             </li>
-            <li id="f-solutions" className="mt-3 flex flex-col justify-center gap-2 items-start sm:justify-start sm:items-start">
-              <Link href="/investment/">
-                <h4 className="text-gray-900 dark:text-gray-50">How to Invest</h4>
+            <li>
+              <Link href="mailto:info@getakasia.com">
+                <span>{t("NavBar.email")}: info@getakasia.com</span>
               </Link>
             </li>
-            <li id="f-ContactUs" className="mt-3 flex flex-col justify-center gap-2 items-start sm:justify-start sm:items-start">
-              <Link href="/contactus/">
-                <h4 className="text-gray-900 dark:text-gray-50">Contact</h4>
+            <li>
+              <Link href="/#">
+                <span>Riyadh, Al Malqa, Saudi Arabia</span>
               </Link>
             </li>
           </ul>
         </div>
-        <div className="w-full flex flex-col gap-6">
-          <div id="f-contactus" className="mt-3">
-            <h4 className="text-gray-900 dark:text-gray-50">Contact</h4>
-            <ul>
-              <li>
-                <Link href="tel:+966114792233">
-                  <span className="text-gray-900 dark:text-gray-50">Phone: +966114442233</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="mailto:info@getakasia.com">
-                  <span className="text-gray-900 dark:text-gray-50">Email: info@getakasia.com</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/#">
-                  <span className="text-gray-900 dark:text-gray-50">Riyadh, Al Malqa, Saudi Arabia</span>
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="w-full flex flex-row items-center justify-between dark:border-t-slate-500/50 border-t-gray-300/50 border-t pt-6 pb-6">
-            <Link href="#">
-              <button aria-label="Toggle dark mode" className="">
-                <div className="flex flex-row gap-2 justify-start items-center">
-                  <span className="dark:block hidden text-gray-900 dark:text-gray-50 font-bold">Light Colors</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" x2="3" y1="12" y2="12"></line>
-                    <line x1="21" x2="23" y1="12" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                  </svg>
-                </div>
-              </button>
-            </Link>
-            <div className="flex flex-row items-center justify-centers gap-2">
-              <button className="font-rubik text-black dark:text-white">
-                <span className="font-semibold">العربية</span>
-              </button>
-            </div>
-          </div>
+        <div className="w-full flex flex-row items-center justify-between dark:border-t-slate-500/50 border-t-gray-300/50 border-t pt-6 pb-6">
+          <Link href="#">
+            <button onClick={toggleTheme}>
+              <div className="flex flex-row gap-2 justify-start items-center">
+                <span className="dark:block hidden font-bold">{t("NavBar.lightMode")}</span>
+                <span className="dark:hidden block font-bold">{t("NavBar.darkMode")}</span>
+                <Image
+                  src={moonIcon}
+                  alt="icon"
+                  width={25}
+                  height={25}
+                  className="flex dark:hidden"
+                />
+                <Image
+                  src={sunIcon}
+                  alt="icon"
+                  width={25}
+                  height={25}
+                  className="hidden dark:flex"
+                />
+              </div>
+            </button>
+          </Link>
+          <button onClick={() => p.toggleLang(p.locale == "ar" ? "en" : "ar")} className="font-semibold">
+            {p.locale == "ar" ? 'English' : 'العربية'}
+          </button>
         </div>
       </div>
+
     </div>
   )
 }

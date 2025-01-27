@@ -15,6 +15,7 @@ import sunIcon from "../assets/images/icons/sun.svg";
 import moonIcon from "../assets/images/icons/moon.svg";
 
 import { useEffect } from "react";
+import { toggleTheme } from "@/hepler";
 
 const Footer = ({ locale }: { locale: string }) => {
   const t = useTranslations("Footer");
@@ -73,16 +74,6 @@ const Footer = ({ locale }: { locale: string }) => {
       document.documentElement.classList.add("dark");
     }
   }, []);
-
-  const toggleTheme = () => {
-    if (document.documentElement.classList.contains("dark")) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    }
-  };
 
   return (
     <footer className="bg-gradient-to-t border-gray-900/5 border-t dark:border-gray-100/5 dark:from-gray-950/90 dark:to-gray-900/40 dark:via-gray-950/40 from-slate-500/25 relative to-75% to-slate-500/0 via-25% via-slate-500/5 z-40">
