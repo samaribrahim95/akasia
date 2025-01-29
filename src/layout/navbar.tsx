@@ -14,8 +14,8 @@ import { usePathname, useRouter } from "next/navigation";
 const Navbar = ({ locale }: { locale: string }) => {
   const t = useTranslations("NavBar");
   const pathname = usePathname();
+  const [isScrolled , setIsScrolled] = useState(false);
   const router = useRouter();
-
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   const menuItem = [
@@ -34,9 +34,19 @@ const Navbar = ({ locale }: { locale: string }) => {
   ];
 
   useEffect(() => {
+    const handleScroll = () => {
+      if(window.scrollY > 100)
+      setIsScrolled(true);
+      else 
+      setIsScrolled(false);
+    }   
+    
+    window.addEventListener('scroll' , handleScroll);
+
     if (openMenu) document.body.style.overflow = "hidden"
     else document.body.style.overflow = "auto"
   }, [openMenu])
+
 
 
   const toggleLang = (newLocale: string) => {
@@ -46,7 +56,7 @@ const Navbar = ({ locale }: { locale: string }) => {
 
   return (
     <div className="overflow-hidden w-full">
-      <nav className="fixed w-full z-[99] top-0 backdrop-blur-md border-b-blue-900/5 dark:border-b-gray-100/5 border-b shadow-lg">
+      <nav className={`fixed w-full z-[99] top-0 backdrop-blur-md border-b-blue-900/5 dark:border-b-gray-100/5 border-b ${isScrolled? 'shadow-lg' : ''} `}>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div id="nav-logo">
             <div className="hidden dark:flex">
@@ -94,17 +104,17 @@ const Navbar = ({ locale }: { locale: string }) => {
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
               {menuItem.map((items, index) => (
-                <li key={index}>
+                <li className="flex items-center" key={index}>
                   <Link
                     href={items.to}
-                    className="font-medium text-black dark:text-slate-100"
+                    className="font-medium text-black dark:text-slate-100 leading-normal"
                   >
                     {items.title}
                   </Link>
                 </li>
               ))}
 
-              <li>
+              <li className={`${locale == "ar"  ? "flex items-center" : "" }`}>
                 <button
                   onClick={() => toggleLang(locale == "ar" ? "en" : "ar")}
                   className="font-medium text-black dark:text-slate-100"
