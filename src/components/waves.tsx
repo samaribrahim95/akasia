@@ -65,8 +65,8 @@ const GradientWaveAnimation: React.FC = () => {
   return <canvas ref={canvasRef} id="gradient-canvas"
     data-js-darken-top="true"
     data-transition-in="true"
-    width="983"
-    height="230"
+    width="800"
+    height="330"
     className="mx-auto max-w-full" />;
 };
 
