@@ -12,7 +12,7 @@ const TrimParagraph = () => {
 
       {(trimLength == t("Home.content").length && (
         <span
-          className="cursor-pointer text-blue-900"
+          className="cursor-pointer text-sky-600 dark:text-sky-200 ms-1"
           onClick={() => setTrimLength(defaultLength)}
         >
           {" "}
@@ -22,7 +22,7 @@ const TrimParagraph = () => {
         <>
           <span>...</span>
           <span
-            className="cursor-pointer text-blue-900"
+            className="cursor-pointer text-sky-600 dark:text-sky-200 ms-1"
             onClick={() => setTrimLength(t("Home.content").length)}
           >
             {" "}
