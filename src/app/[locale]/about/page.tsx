@@ -169,7 +169,7 @@ const About = () => {
 
       <section className="gap-8 py-16 z-20 relative">
         <div
-          className="absolute blur-3xl overflow-hidden sm:-top-20"
+          className="absolute blur-3xl overflow-hidden sm:-top-20 max-w-full"
           aria-hidden="true"
         >
           <div className="gradient-box-light relative left-[calc(50%-10rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[0deg]   sm:left-[calc(50%-10rem)] sm:w-[72.1875rem] "></div>

@@ -1,3 +1,4 @@
+
 import Image from "next/image"
 import Link from "next/link"
 import sunIcon from "../assets/images/icons/sun.svg";
@@ -13,7 +14,9 @@ type Props = {
   opened: boolean,
   locale: string,
   toggleLang: (locale: string) => void
+  setOpenMenu: (opened: boolean) => void
 }
+
 
 const MobileMenu = (p: Props) => {
   const t = useTranslations();
@@ -24,7 +27,7 @@ const MobileMenu = (p: Props) => {
         {
           p.menuItem.map((item, index) =>
             <li className="px-2 py-3 mb-3" key={index}>
-              <Link href={item.to}>
+              <Link className="dark:text-white text-gray-900 " href={item.to} onClick={()=> p.setOpenMenu(!p.opened)}>
                 {item.title}
               </Link>
             </li>)

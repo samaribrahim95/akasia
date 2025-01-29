@@ -121,7 +121,7 @@ const Navbar = ({ locale }: { locale: string }) => {
           </div>
         </div>
       </nav>
-      <MobileMenu opened={openMenu} menuItem={menuItem} locale={locale} toggleLang={toggleLang} />
+      <MobileMenu opened={openMenu} menuItem={menuItem} locale={locale} toggleLang={toggleLang} setOpenMenu={setOpenMenu} />
 
     </div>
   );

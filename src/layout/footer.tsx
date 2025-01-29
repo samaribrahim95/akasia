@@ -100,10 +100,10 @@ const Footer = ({ locale }: { locale: string }) => {
           </Link>
           <div
             id="footer-quick"
-            className="flex flex-col flex-1  w-full justify-center sm:justify-end sm:items-start gap-2"
+            className="flex flex-col flex-1  w-full justify-center md:justify-end md:items-start gap-2"
           >
             <h3 className="text-md">{t("quickLinks")}</h3>
-            <ul className="flex  flex-col justify-center items-center sm:justify-start sm:items-start">
+            <ul className="flex  flex-col justify-center items-center md:justify-start md:items-start">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link href={link.to}>
@@ -115,10 +115,10 @@ const Footer = ({ locale }: { locale: string }) => {
           </div>
           <div
             id="footer-services"
-            className="flex flex-1 flex-col  w-full items-center justify-center sm:justify-start sm:items-start gap-2"
+            className="flex flex-1 flex-col  w-full items-center justify-center md:justify-start md:items-start gap-2"
           >
             <h3 className="text-md">{t("legal")}</h3>
-            <ul className="flex flex-col justify-center items-center sm:justify-start sm:items-start">
+            <ul className="flex flex-col justify-center items-center md:justify-start md:items-start">
               {legalLinks.map((link, index) => (
                 <li key={index}>
                   <Link href={link.to}>

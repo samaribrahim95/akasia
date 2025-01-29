@@ -65,24 +65,24 @@ const Investment = () => {
             <Image
               src={screen2}
               alt=""
-              className="max-h-[350px] w-auto mx-auto"
+              className="max-h-[280px] md:max-h-[350px] w-auto mx-auto"
             />
           </div>
           <div className="md:col-span-2 flex flex-col justify-center">
             <h2 className=" !leading-[60px] dark:text-gray-200 mb-6 text-gray-800 text-center">
               {t("Investment.downloadSlogn")}
             </h2>
-            <div className="flex flex-col md:flex-row justify-center pb-8">
+            <div className="flex flex-col sm:flex-row justify-center pb-8 items-center">
               <Link href="#">
                 <Image
-                  className="mx-1 w-[130px] sm:w-[170px]"
+                  className="mx-1 w-[170px] max-w-full"
                   src={appIcon1}
                   alt=""
                 />
               </Link>
               <Link href="#">
                 <Image
-                  className="mx-1 w-[140px] sm:w-[180px]"
+                  className="mx-1 w-[170px] max-w-full"
                   src={appIcon2}
                   alt=""
                 />
