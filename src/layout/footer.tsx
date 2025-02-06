@@ -75,7 +75,7 @@ const Footer = ({ locale }: { locale: string }) => {
     }
   }, []);
 
-  let linkHome = `/${locale}/`;
+  const linkHome = `/${locale}/`;
 
   return (
     <footer className="bg-gradient-to-t border-gray-900/5 border-t dark:border-gray-100/5 dark:from-gray-950/90 dark:to-gray-900/40 dark:via-gray-950/40 from-slate-500/25 relative to-75% to-slate-500/0 via-25% via-slate-500/5 z-40">

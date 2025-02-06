@@ -12,7 +12,7 @@ import screen1 from "../assets/images/screen-1.png";
 
 const Header = ({ locale }: { locale: string }) => {
   const t = useTranslations("Home");
-  let linkAbout =  `/${locale}/about`;
+  const linkAbout =  `/${locale}/about`;
 
   return (
     <div className="relative min-h-svh flex flex-col justify-between pb-8">

@@ -54,7 +54,7 @@ const Navbar = ({ locale }: { locale: string }) => {
     router.push(`/${newLocale}/${path}`);
   };
 
-  let linkHome = `/${locale}/`;
+  const linkHome = `/${locale}/`;
 
   return (
     <div className="overflow-hidden w-full">
