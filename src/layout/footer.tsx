@@ -75,12 +75,14 @@ const Footer = ({ locale }: { locale: string }) => {
     }
   }, []);
 
+  let linkHome = `/${locale}/`;
+
   return (
     <footer className="bg-gradient-to-t border-gray-900/5 border-t dark:border-gray-100/5 dark:from-gray-950/90 dark:to-gray-900/40 dark:via-gray-950/40 from-slate-500/25 relative to-75% to-slate-500/0 via-25% via-slate-500/5 z-40">
       <div className="w-full flex flex-col justify-center mx-auto align-center max-w-[1000px]">
-        <div className="gap-12 grid md:grid-cols-4 place-content-center place-items-center pt-6">
+        <div className="gap-12 md:grid flex flex-col md:grid-cols-4 place-content-center place-items-center pt-6">
           <Link
-            href="/"
+            href={linkHome}
             className="gap-2 md:col-span-2 pb-4 w-full justify-items-center"
           >
             <Image
@@ -100,7 +102,7 @@ const Footer = ({ locale }: { locale: string }) => {
           </Link>
           <div
             id="footer-quick"
-            className="flex flex-col flex-1  w-full justify-center md:justify-end md:items-start gap-2"
+            className="flex flex-col flex-1  w-full justify-center items-center md:justify-end md:items-start gap-2"
           >
             <h3 className="text-md">{t("quickLinks")}</h3>
             <ul className="flex  flex-col justify-center items-center md:justify-start md:items-start">

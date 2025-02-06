@@ -1,15 +1,12 @@
 "use client";
-
-// import React, { useEffect, useState } from "react";
+import React from "react"; // Import React explicitly
 import { useTranslations } from "next-intl";
-
 import Image from "next/image";
 import aboutImg from "../../../assets/images/about.jpg";
 import aboutImg2 from "../../../assets/images/about-2.jpg";
 
 import MissionIcon from "@/components/dynamicIcons/mission";
 import VisionIcon from "@/components/dynamicIcons/vision";
-
 import RobotIcon from "@/components/dynamicIcons/robot";
 import LikeIcon from "@/components/dynamicIcons/like";
 import BookIcon from "@/components/dynamicIcons/book";
@@ -21,8 +18,18 @@ import Solutions from "@/components/solutions";
 import BreadCrumb from "@/components/breadcrumb";
 import BluredBg from "@/components/blueredBg";
 
-const About = () => {
+// Add type for params
+type Params = {
+  locale: string;
+};
+
+// Your component definition
+const About = ({ params }: { params: Promise<Params> }) => {
+
   const t = useTranslations();
+
+  // Accessing params directly - no need for React.use() in this case
+  const { locale }  = React.use(params) as Params;
 
   const aboutAkasia = [
     {
@@ -92,7 +99,7 @@ const About = () => {
       <BreadCrumb
         data={[
           {
-            link: "/",
+            link:`/${locale}/`,
             text: t("Home.siteName"),
           },
           {

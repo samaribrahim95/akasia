@@ -2,6 +2,7 @@
 
 // import React, { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import React from "react"; // Import React explicitly
 
 import Image from "next/image";
 import Link from "next/link";
@@ -18,8 +19,18 @@ import BreadCrumb from "@/components/breadcrumb";
 
 import screen2 from "../../../assets/images/screen-2-left.png";
 
-const Investment = () => {
+// Add type for params
+type Params = {
+  locale: string;
+};
+
+// Your component definition
+const Investment = ({ params }: { params: Promise<Params> }) => {
+
   const t = useTranslations();
+
+  // Accessing params directly - no need for React.use() in this case
+  const { locale }  = React.use(params) as Params;
 
   const investmentSetps = [
     {
@@ -44,7 +55,7 @@ const Investment = () => {
       <BreadCrumb
         data={[
           {
-            link: "/",
+            link: `/${locale}/`,
             text: t("Home.siteName"),
           },
           {

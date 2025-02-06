@@ -10,8 +10,9 @@ import CMALogo from "@/components/dynamicIcons/CMA";
 import SCBLogo from "@/components/dynamicIcons/SCB";
 import screen1 from "../assets/images/screen-1.png";
 
-const Header = () => {
+const Header = ({ locale }: { locale: string }) => {
   const t = useTranslations("Home");
+  let linkAbout =  `/${locale}/about`;
 
   return (
     <div className="relative min-h-svh flex flex-col justify-between pb-8">
@@ -31,7 +32,7 @@ const Header = () => {
             <div className="mt-5 mb-8">
               <div className="text-center">
                 <Link
-                  href="/about"
+                  href={linkAbout}
                   className="text-sm font-noto font-semibold leading-6 hover:ms-2"
                 >
                   {t("learnMore")}

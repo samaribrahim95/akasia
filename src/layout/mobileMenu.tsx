@@ -49,7 +49,7 @@ const MobileMenu = (p: Props) => {
               </Link>
             </li>
             <li>
-              <Link href="/#">
+              <Link href="#">
                 <span>Riyadh, Al Malqa, Saudi Arabia</span>
               </Link>
             </li>

@@ -54,13 +54,15 @@ const Navbar = ({ locale }: { locale: string }) => {
     router.push(`/${newLocale}/${path}`);
   };
 
+  let linkHome = `/${locale}/`;
+
   return (
     <div className="overflow-hidden w-full">
       <nav className={`fixed w-full z-[99] top-0 backdrop-blur-md border-b-blue-900/5 dark:border-b-gray-100/5 border-b ${isScrolled? 'shadow-lg' : ''} `}>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div id="nav-logo">
             <div className="hidden dark:flex">
-              <Link href="/">
+              <Link href={linkHome}>
                 <Image
                   alt="logo - akasia"
                   loading="lazy"
@@ -72,7 +74,7 @@ const Navbar = ({ locale }: { locale: string }) => {
               </Link>
             </div>
             <div className="flex dark:hidden">
-              <Link href="/">
+              <Link href={linkHome}>
                 <Image
                   alt="logo - akasia"
                   width="70"

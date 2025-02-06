@@ -1,6 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import React from "react"; // Import React explicitly
+
 import Image from "next/image";
 import Link from "next/link";
 import BluredBg from "@/components/blueredBg";
@@ -8,14 +10,26 @@ import BluredBg from "@/components/blueredBg";
 import BreadCrumb from "@/components/breadcrumb";
 import privacyImage from "../../../assets/images/privacy.jpg";
 
-const Privacy = () => {
+
+// Add type for params
+type Params = {
+  locale: string;
+};
+
+// Your component definition
+const Privacy = ({ params }: { params: Promise<Params> }) => {
+
   const t = useTranslations();
+
+  // Accessing params directly - no need for React.use() in this case
+  const { locale }  = React.use(params) as Params;
+
   return (
     <div className="mt-[100px] relative min-h-svh flex flex-col justify-between">
       <BreadCrumb
         data={[
           {
-            link: "/",
+            link: `/${locale}/`,
             text: t("Home.siteName"),
           },
           {
