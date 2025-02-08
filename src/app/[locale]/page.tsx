@@ -14,7 +14,7 @@ export function generateStaticParams() {
 
 // Home component that receives `locale` as a parameter
 export default async function Home({ params }: { params: { locale: string } }) {
-  const { locale } = params;
+  const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as LocalesType)) {

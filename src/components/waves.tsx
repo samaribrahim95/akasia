@@ -14,7 +14,7 @@ const GradientWaveAnimation: React.FC = () => {
     const phase_0 = 0;
     const waveHeight_0 = 200; // Height of the wave
     const waveFrequency_0 = 0.015; // Frequency of the waves
-    const waveSpeed_0 = 0.02; // Speed of wave animation
+    const waveSpeed_0 = 0.004; // Speed of wave animation
 
     const createGradientBackground = () => {
       const gradient = ctx.createLinearGradient(10, 10, 0, canvas.height);
