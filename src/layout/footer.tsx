@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import logo from "../assets/images/akasia-logo.svg";
 import logoLight from "../assets/images/akasia-logo-light.svg";
@@ -17,8 +17,9 @@ import moonIcon from "../assets/images/icons/moon.svg";
 import { useEffect } from "react";
 import { toggleTheme } from "@/hepler";
 
-const Footer = ({ locale }: { locale: string }) => {
+const Footer = () => {
   const t = useTranslations("Footer");
+  const locale = useLocale();
   const currentYear = new Date().getFullYear();
 
   const linksIcons = [

@@ -5,14 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import logoTxt from "../assets/images/akasia-txt-logo.svg";
 import logoTxtLight from "../assets/images/akasia-txt-logo-light.svg";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import MenuBarIcon from "@/components/dynamicIcons/menuBar";
 import CloseIcon from "@/components/dynamicIcons/close";
 import MobileMenu from "./mobileMenu";
 import { usePathname, useRouter } from "next/navigation";
 
-const Navbar = ({ locale }: { locale: string }) => {
+const Navbar = () => {
   const t = useTranslations("NavBar");
+  const locale = useLocale();
   const pathname = usePathname();
   const [isScrolled , setIsScrolled] = useState(false);
   const router = useRouter();

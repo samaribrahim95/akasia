@@ -1,6 +1,6 @@
 import CircleTrueIcon from "@/components/dynamicIcons/circleTrue";
 import AwardIcon from "@/components/dynamicIcons/award";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import BluredBg from "@/components/blueredBg";
 import Link from "next/link";
 import WaveAnimation from "./waves";
@@ -10,8 +10,9 @@ import CMALogo from "@/components/dynamicIcons/CMA";
 import SCBLogo from "@/components/dynamicIcons/SCB";
 import screen1 from "../assets/images/screen-1.png";
 
-const Header = ({ locale }: { locale: string }) => {
+const Header = () => {
   const t = useTranslations("Home");
+  const locale = useLocale();
   const linkAbout =  `/${locale}/about`;
 
   return (

@@ -1,24 +1,16 @@
 "use client";
 import React from "react"; // Import React explicitly
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import contactImage from "../../../assets/images/contact.jpg";
 import ContactInfo from "@/components/contactInfo";
 import BreadCrumb from "@/components/breadcrumb";
 import BluredBg from "@/components/blueredBg";
 
-// Add type for params
-type Params = {
-  locale: string;
-};
-
 // Your component definition
-const Contact = ({ params }: { params: Promise<Params> }) => {
-
+const Contact = () => {
   const t = useTranslations();
-
-  // Accessing params directly - no need for React.use() in this case
-  const { locale }  = React.use(params) as Params;
+  const locale = useLocale();
 
   return (
     <div className="mt-[100px]">

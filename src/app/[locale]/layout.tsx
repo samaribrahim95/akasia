@@ -50,13 +50,13 @@ export default async function RootLayout({
       <body className="w-full h-full min-h-screen relative text-gray-600 dark:bg-gray-950 dark:text-gray-200">
         <NextIntlClientProvider messages={messages}>
           <div>
-            <Navbar locale={locale} />
+            <Navbar/>
             <div className="container">
               {children}
               <StartYourTrip />
               <TrimParagraph />
             </div>
-            <Footer locale={locale} />
+            <Footer/>
           </div>
         </NextIntlClientProvider>
       </body>
